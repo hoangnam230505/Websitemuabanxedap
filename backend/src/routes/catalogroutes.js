@@ -1,6 +1,6 @@
 // backend/src/routes/catalogRoutes.js
 const express    = require('express');
-const controller = require('../controllers/catalogcontroller');
+const controller = require('../controllers/catalogController');
 const router     = express.Router();
 
 router.get('/',      controller.getCategories);

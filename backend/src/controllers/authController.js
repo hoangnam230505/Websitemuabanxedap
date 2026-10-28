@@ -10,6 +10,10 @@ exports.register = async (req, res) => {
       return res.status(400).json({ success: false, message: 'Thiếu thông tin', data: null });
     }
 
+    if (password.length < 6) {
+      return res.status(400).json({ success: false, message: 'Mật khẩu phải có ít nhất 6 ký tự', data: null });
+    }
+
     // Prepared Statement — chống SQL Injection
     const [existing] = await pool.query(
       'SELECT user_id FROM users WHERE email = ?', [email]

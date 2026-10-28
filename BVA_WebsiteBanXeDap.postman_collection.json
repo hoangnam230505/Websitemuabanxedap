@@ -1,0 +1,223 @@
+{
+  "info": {
+    "_postman_id": "bva-testing-website-ban-xe-dap",
+    "name": "BVA_Testing_WebsiteBanXeDap",
+    "description": "Bộ Test Case Phân tích giá trị biên (Boundary Value Analysis - BVA) kiểm thử chức năng Đăng ký tài khoản (Độ dài mật khẩu) theo chuẩn môn Kiểm thử phần mềm.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "TC_BVA_01 [min - 1] Password 5 ký tự (Không hợp lệ)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"[BVA min - 1] Trả về mã HTTP 400 Bad Request\", function () {",
+              "    pm.response.to.have.status(400);",
+              "});",
+              "",
+              "pm.test(\"[BVA min - 1] Báo lỗi mật khẩu phải có ít nhất 6 ký tự\", function () {",
+              "    var jsonData = pm.response.json();",
+              "    pm.expect(jsonData.success).to.be.false;",
+              "    pm.expect(jsonData.message).to.include(\"ít nhất 6 ký tự\");",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Nguyen Van A\",\n  \"email\": \"test_bva_5chars_{{$timestamp}}@gmail.com\",\n  \"password\": \"12345\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/auth/register",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "auth", "register"]
+        },
+        "description": "Kiểm thử giá trị dưới biên dưới: Password = 5 ký tự (min - 1). Kết quả kỳ vọng: Bị từ chối với mã 400."
+      }
+    },
+    {
+      "name": "TC_BVA_02 [min] Password 6 ký tự (Hợp lệ tối thiểu)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"[BVA min] Trả về mã HTTP 201 Created\", function () {",
+              "    pm.response.to.have.status(201);",
+              "});",
+              "",
+              "pm.test(\"[BVA min] Đăng ký thành công\", function () {",
+              "    var jsonData = pm.response.json();",
+              "    pm.expect(jsonData.success).to.be.true;",
+              "    pm.expect(jsonData.message).to.eql(\"Đăng ký thành công\");",
+              "    pm.expect(jsonData.data).to.have.property(\"user_id\");",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Nguyen Van B\",\n  \"email\": \"test_bva_6chars_{{$timestamp}}@gmail.com\",\n  \"password\": \"123456\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/auth/register",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "auth", "register"]
+        },
+        "description": "Kiểm thử giá trị ngay biên dưới: Password = 6 ký tự (min). Kết quả kỳ vọng: Đăng ký thành công với mã 201."
+      }
+    },
+    {
+      "name": "TC_BVA_03 [min + 1] Password 7 ký tự (Hợp lệ)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"[BVA min + 1] Trả về mã HTTP 201 Created\", function () {",
+              "    pm.response.to.have.status(201);",
+              "});",
+              "",
+              "pm.test(\"[BVA min + 1] Đăng ký thành công\", function () {",
+              "    var jsonData = pm.response.json();",
+              "    pm.expect(jsonData.success).to.be.true;",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Nguyen Van C\",\n  \"email\": \"test_bva_7chars_{{$timestamp}}@gmail.com\",\n  \"password\": \"1234567\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/auth/register",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "auth", "register"]
+        },
+        "description": "Kiểm thử giá trị trên biên dưới: Password = 7 ký tự (min + 1). Kết quả kỳ vọng: Đăng ký thành công với mã 201."
+      }
+    },
+    {
+      "name": "TC_BVA_04 [Nominal] Password 12 ký tự (Hợp lệ thông thường)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"[BVA Nominal] Trả về mã HTTP 201 Created\", function () {",
+              "    pm.response.to.have.status(201);",
+              "});",
+              "",
+              "pm.test(\"[BVA Nominal] Đăng ký thành công\", function () {",
+              "    var jsonData = pm.response.json();",
+              "    pm.expect(jsonData.success).to.be.true;",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Nguyen Van D\",\n  \"email\": \"test_bva_nom_{{$timestamp}}@gmail.com\",\n  \"password\": \"Password@123\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/auth/register",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "auth", "register"]
+        },
+        "description": "Kiểm thử giá trị danh định thông thường (Nominal): Password = 12 ký tự. Kết quả kỳ vọng: Đăng ký thành công với mã 201."
+      }
+    },
+    {
+      "name": "TC_BVA_05 [Extremum] Password rỗng 0 ký tự (Không hợp lệ)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"[BVA Empty] Trả về mã HTTP 400 Bad Request\", function () {",
+              "    pm.response.to.have.status(400);",
+              "});",
+              "",
+              "pm.test(\"[BVA Empty] Báo lỗi thiếu thông tin\", function () {",
+              "    var jsonData = pm.response.json();",
+              "    pm.expect(jsonData.success).to.be.false;",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Nguyen Van E\",\n  \"email\": \"test_bva_empty_{{$timestamp}}@gmail.com\",\n  \"password\": \"\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/auth/register",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "auth", "register"]
+        },
+        "description": "Kiểm thử giá trị biên cực tiểu: Password rỗng (0 ký tự). Kết quả kỳ vọng: Báo lỗi mã 400."
+      }
+    }
+  ]
+}

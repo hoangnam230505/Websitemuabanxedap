@@ -56,14 +56,18 @@ jobs:
 
       # Kiểm tra và login nếu có tài khoản Docker Hub
       - name: Đăng nhập Docker Hub
-        if: env.DOCKERHUB_USERNAME != ''
+        if: ${{ secrets.DOCKERHUB_USERNAME != '' }}
         uses: docker/login-action@v3
-        env:
-          DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Build Docker Backend Image (Test Build)
+      - name: Quản lý Version Build và Push Docker Image
         run: |
-          docker build -t bike-backend:latest ./backend
+          docker build -t bike-backend:latest -t bike-backend:v1.0.0 ./backend
+          if [ -n "${{ secrets.DOCKERHUB_USERNAME }}" ]; then
+            docker tag bike-backend:latest ${{ secrets.DOCKERHUB_USERNAME }}/bike-backend:latest
+            docker tag bike-backend:v1.0.0 ${{ secrets.DOCKERHUB_USERNAME }}/bike-backend:v1.0.0
+            docker push ${{ secrets.DOCKERHUB_USERNAME }}/bike-backend:latest
+            docker push ${{ secrets.DOCKERHUB_USERNAME }}/bike-backend:v1.0.0
+          fi
