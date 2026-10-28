@@ -1,0 +1,69 @@
+name: CI/CD Pipeline - Test, Qodana & Docker Build
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  # 1. Quét chất lượng code với Qodana (bật không chặn lỗi nếu chỉ quét phân tích)
+  code-scan-qodana:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run Qodana Scan
+        uses: JetBrains/qodana-action@v2024.1
+        continue-on-error: true # Cho phép pipeline tiếp tục ngay cả khi có cảnh báo code
+
+  # 2. Chạy kiểm thử tự động với CodeceptJS
+  e2e-testing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Khởi động hệ thống với Docker Compose
+        run: |
+          docker compose up -d --build
+          sleep 15 # Đợi 15 giây để MySQL và Apache khởi động xong
+
+      - name: Cài đặt Dependencies & Trình duyệt Playwright
+        run: |
+          npm install
+          npx playwright install --with-deps chromium
+
+      - name: Chạy kiểm thử CodeceptJS (Chế độ Headless)
+        run: npx codeceptjs run --steps
+
+  # 3. Quản lý Version và Build Docker Image
+  build-and-push-docker:
+    runs-on: ubuntu-latest
+    needs: e2e-testing
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # Kiểm tra và login nếu có tài khoản Docker Hub
+      - name: Đăng nhập Docker Hub
+        if: env.DOCKERHUB_USERNAME != ''
+        uses: docker/login-action@v3
+        env:
+          DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build Docker Backend Image (Test Build)
+        run: |
+          docker build -t bike-backend:latest ./backend

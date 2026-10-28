@@ -1,0 +1,37 @@
+{
+  "hasFailed": false,
+  "stats": {
+    "passes": 1,
+    "failures": 0,
+    "tests": 1,
+    "pending": 0,
+    "failedHooks": 0,
+    "start": "2026-10-13T16:03:48.715Z",
+    "end": "2026-10-13T16:03:49.214Z",
+    "duration": 499
+  },
+  "duration": 742,
+  "tests": [
+    {
+      "opts": {},
+      "tags": [],
+      "uid": "LO9qvom72cJvA59KS1yOvHXOpQSueClvGs_UNeqJAC",
+      "retries": -1,
+      "title": "test something",
+      "state": "passed",
+      "notes": [],
+      "meta": {
+        "browser": "chromium",
+        "browserVersion": "156.0.8078.4",
+        "windowSize": "1280x720"
+      },
+      "artifacts": [],
+      "duration": 10,
+      "parent": {
+        "title": "npx codeceptjs run --steps"
+      },
+      "steps": []
+    }
+  ],
+  "failures": []
+}

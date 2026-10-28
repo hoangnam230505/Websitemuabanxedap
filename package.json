@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "codeceptjs": "^4.2.1",
+    "playwright": "^1.64.0"
+  }
+}
