@@ -3,6 +3,7 @@ Feature('Kiểm thử giao diện tự động (E2E) - Website Mua Bán Xe Đạ
 Scenario('1. Kiểm tra truy cập trang chủ và kiểm tra phần tử giao diện', ({ I }) => {
     I.amOnPage('/');
     I.seeInTitle('Website Mua Bán Xe Đạp');
+    I.see('Chào mừng đến với Chợ Xe Đạp Cũ');
     I.wait(1);
 });
 
@@ -20,5 +21,6 @@ Scenario('3. Kiểm tra form đăng ký tài khoản mới', ({ I }) => {
     I.fillField('input[name="name"]', 'Sinh Vien Test');
     I.fillField('input[name="email"]', 'tester@gmail.com');
     I.fillField('input[name="password"]', 'Password123');
+    I.fillField('input[name="password-confirm"]', 'Password123');
     I.wait(1);
 });
