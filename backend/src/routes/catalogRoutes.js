@@ -3,8 +3,9 @@ const express    = require('express');
 const controller = require('../controllers/catalogController');
 const router     = express.Router();
 
-router.get('/',      controller.getCategories);
-router.get('/stats', controller.getCategoryStats); // Thêm dòng này
-router.get('/brands', controller.getBrands);
+router.get('/',           controller.getCategories);
+router.get('/categories', controller.getCategories);
+router.get('/stats',      controller.getCategoryStats);
+router.get('/brands',     controller.getBrands);
 
 module.exports = router;
