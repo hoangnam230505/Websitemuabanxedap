@@ -1,4 +1,12 @@
 {
+  "name": "website-mua-ban-xe-dap-testing",
+  "version": "1.0.0",
+  "description": "Software Testing Project - Bike Marketplace",
+  "scripts": {
+    "test": "node tests/whitebox_test.js",
+    "test:whitebox": "node tests/whitebox_test.js",
+    "test:e2e": "codeceptjs run --steps"
+  },
   "devDependencies": {
     "codeceptjs": "^4.2.1",
     "playwright": "^1.64.0"

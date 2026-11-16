@@ -12,12 +12,12 @@
 
 Hệ thống được theo dõi và quản lý công việc thông qua **Jira Software (Project Key: `KTWXD`)** và **GitHub Actions**.
 
-| STT | Họ và Tên | Mã Sinh Viên (MSSV) | Vai Trò | Nhiệm Vụ Chính Trong Dự Án Kiểm Thử | Jira Ticket Phụ Trách |
-|:---:|:---|:---:|:---|:---|:---:|
-| 1 | **Hoàng Nam Nguyễn** | *Team Leader* | QA Lead & Test Automation | - Trưởng nhóm điều phối dự án kiểm thử.<br>- Xây dựng kịch bản kiểm thử tự động giao diện E2E bằng **CodeceptJS + Playwright**.<br>- Thiết kế kịch bản luồng tương tác người dùng: Đăng nhập, Catalog xe, Giỏ hàng. | `KTWXD-1`<br>`KTWXD-5` |
-| 2 | **Lê Thành Nhật** | **060205006183**<br>*(GitHub: ltnhat0313)* | Core QA & CI/CD Specialist | - Tích hợp phân tích mã tĩnh bảo mật với **JetBrains Qodana** (`qodana.yaml`).<br>- Thiết lập quy trình tự động hóa **GitHub Actions CI/CD Pipeline** đa tầng (`.github/workflows/ci.yml`).<br>- Thiết kế bộ **108 Test Cases toàn diện 7 chương** (BVA, Phân vùng tương đương, Bảng quyết định, State Transition, v.v.) xuất ra Excel, Word, CSV.<br>- Xây dựng kịch bản kiểm thử hộp trắng (**White-box CFG Basis Path Testing**) đạt 100% Branch Coverage (`tests/whitebox_test.js`).<br>- Xây dựng bộ tự động hóa kiểm thử API bằng **Postman Collection** (28/28 assertions PASSED). | `KTWXD-2`<br>`KTWXD-6`<br>`KTWXD-8` |
-| 3 | **Nguyễn Thiên Giang** | *Member* | DevOps & Deployment QA | - Đóng gói container hóa toàn bộ hệ thống bằng **Docker & Docker Compose**.<br>- Quản lý version build, tự động hóa build image và push lên **Docker Hub** (`latest`, `v1.0.0`). | `KTWXD-3`<br>`KTWXD-7` |
-| 4 | **Tuấn Trần** | *Member* | Automation QA Support | - Hỗ trợ thiết lập kịch bản kiểm thử hồi quy (Regression Testing).<br>- Giám sát thực thi kiểm thử và thu thập log kết quả trong pipeline. | `KTWXD-4` |
+| STT | Họ và Tên | Vai Trò | Nhiệm Vụ Chính Trong Dự Án Kiểm Thử | Jira Ticket Phụ Trách |
+|:---:|:---|:---|:---|:---:|
+| 1 | **Hoàng Nam Nguyễn** | QA Lead & Test Automation | - Trưởng nhóm điều phối dự án kiểm thử.<br>- Xây dựng kịch bản kiểm thử tự động giao diện E2E bằng **CodeceptJS + Playwright**.<br>- Thiết kế kịch bản luồng tương tác người dùng: Đăng nhập, Catalog xe, Giỏ hàng. | `KTWXD-1`<br>`KTWXD-5` |
+| 2 | **Lê Thành Nhật** *(GitHub: ltnhat0313)* | Core QA & CI/CD Specialist | - Tích hợp phân tích mã tĩnh bảo mật với **JetBrains Qodana** (`qodana.yaml`).<br>- Thiết lập quy trình tự động hóa **GitHub Actions CI/CD Pipeline** đa tầng (`.github/workflows/ci.yml`).<br>- Thiết kế bộ **108 Test Cases toàn diện 7 chương** (BVA, Phân vùng tương đương, Bảng quyết định, State Transition, v.v.) xuất ra Excel, Word, CSV.<br>- Xây dựng kịch bản kiểm thử hộp trắng (**White-box CFG Basis Path Testing**) đạt 100% Branch Coverage (`tests/whitebox_test.js`).<br>- Xây dựng bộ tự động hóa kiểm thử API bằng **Postman Collection** (28/28 assertions PASSED). | `KTWXD-2`<br>`KTWXD-6`<br>`KTWXD-8` |
+| 3 | **Nguyễn Thiên Giang** | DevOps & Deployment QA | - Đóng gói container hóa toàn bộ hệ thống bằng **Docker & Docker Compose**.<br>- Quản lý version build, tự động hóa build image và push lên **Docker Hub** (`latest`, `v1.0.0`). | `KTWXD-3`<br>`KTWXD-7` |
+| 4 | **Tuấn Trần** | Automation QA Support | - Hỗ trợ thiết lập kịch bản kiểm thử hồi quy (Regression Testing).<br>- Giám sát thực thi kiểm thử và thu thập log kết quả trong pipeline. | `KTWXD-4` |
 
 ---
 

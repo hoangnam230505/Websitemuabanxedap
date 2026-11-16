@@ -42,6 +42,9 @@ jobs:
           npm install
           npx playwright install --with-deps chromium
 
+      - name: Chạy Kiểm thử Hộp trắng (White-box CFG Basis Path Test)
+        run: node tests/whitebox_test.js
+
       - name: Chạy kiểm thử CodeceptJS (Chế độ Headless)
         run: npx codeceptjs run --steps
 

@@ -2,7 +2,7 @@
 
 > **Môn học:** Kiểm thử phần mềm – Trường ĐH Giao thông Vận tải TP.HCM (UTH)
 > **Dự án:** Website Mua Bán Xe Đạp (`Websitemuabanxedap-main`)
-> **Sinh viên thực hiện:** Lê Thành Nhật (MSSV: `060205006183`)
+> **Sinh viên thực hiện:** Lê Thành Nhật (GitHub: `ltnhat0313`)
 > **Tổng quy mô:** **108 Test Cases hoàn chỉnh** bao phủ 9 kỹ thuật
 
 ---
