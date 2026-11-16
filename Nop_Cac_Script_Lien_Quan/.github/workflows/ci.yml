@@ -32,10 +32,17 @@ jobs:
         with:
           node-version: 20
 
-      - name: Khởi động hệ thống với Docker Compose
+      - name: Khởi động hệ thống với Docker Compose & Chờ sẵn sàng
         run: |
           docker compose up -d --build
-          sleep 15 # Đợi 15 giây để MySQL và Apache khởi động xong
+          echo "Đang đợi MySQL và Backend sẵn sàng..."
+          for i in {1..30}; do
+            if curl -s http://localhost:5000/api/bikes > /dev/null; then
+              echo "Backend và Database đã sẵn sàng!"
+              break
+            fi
+            sleep 2
+          done
 
       - name: Cài đặt Dependencies & Trình duyệt Playwright
         run: |
