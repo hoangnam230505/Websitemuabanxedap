@@ -3,7 +3,7 @@
 > **Môn học:** Kiểm thử phần mềm – Trường ĐH Giao thông Vận tải TP.HCM (UTH)
 > **Dự án:** Website Mua Bán Xe Đạp (`Websitemuabanxedap-main`)
 > **Sinh viên thực hiện:** Lê Thành Nhật (GitHub: `ltnhat0313`)
-> **Tổng quy mô:** **108 Test Cases hoàn chỉnh** bao phủ 9 kỹ thuật
+> **Tổng quy mô:** **125 Test Cases hoàn chỉnh** bao phủ 9 kỹ thuật
 
 ---
 
@@ -1931,6 +1931,648 @@
   2. Kiểm tra container
 - **Kết quả mong đợi (Expected Results):**
   > MySQL 8.0, PHP Frontend 8.2 và Node Backend kết nối đồng bộ
+
+---
+
+
+
+---
+
+## PHẦN BỔ SUNG: 17 TEST CASES NÂNG CAO (TỔNG CỘNG: 125 TEST CASES)
+
+### TC-BVA-19: Kiểm thử biên số lượng ảnh upload khi đăng bán xe tại min = 1 ảnh
+- **Phân hệ (Module):** `Đăng tin & Upload ảnh`
+- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` (Chương 4)
+- **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
+- **Tiền điều kiện (Pre-conditions):**
+  > Người dùng đã đăng nhập và đang ở trang sell.php
+- **Các bước thực hiện chi tiết (Test Steps):**
+  1. Điền thông tin xe hợp lệ
+  2. Chọn tải lên đúng 1 ảnh sản phẩm
+  3. Nhấn Đăng Bán
+- **Dữ liệu đầu vào (Test Data):**
+  ```text
+  files_count=1 (min biên)
+  ```
+- **Kết quả mong đợi (Expected Results):**
+  > Hệ thống chấp nhận upload và đăng bài thành công, HTTP 201 Created
+
+---
+
+### TC-BVA-20: Kiểm thử biên số lượng ảnh upload khi đăng bán xe tại max = 5 ảnh
+- **Phân hệ (Module):** `Đăng tin & Upload ảnh`
+- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` (Chương 4)
+- **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
+- **Tiền điều kiện (Pre-conditions):**
+  > Người dùng đã đăng nhập và đang ở trang sell.php
+- **Các bước thực hiện chi tiết (Test Steps):**
+  1. Điền thông tin xe hợp lệ
+  2. Chọn tải lên đúng 5 ảnh sản phẩm
+  3. Nhấn Đăng Bán
+- **Dữ liệu đầu vào (Test Data):**
+  ```text
+  files_count=5 (max biên)
+  ```
+- **Kết quả mong đợi (Expected Results):**
+  > Hệ thống chấp nhận tải lên cả 5 ảnh và lưu trữ thành công, HTTP 201 Created
+
+---
+
+### TC-BVA-21: Kiểm thử biên số lượng ảnh upload vượt ngưỡng max+1 = 6 ảnh
+- **Phân hệ (Module):** `Đăng tin & Upload ảnh`
+- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` (Chương 4)
+- **Mức độ ưu tiên:** `Medium` | **Trạng thái:** `PASSED`
+- **Tiền điều kiện (Pre-conditions):**
+  > Người dùng đang ở form upload ảnh đăng tin
+- **Các bước thực hiện chi tiết (Test Steps):**
+  1. Chọn đồng thời 6 tệp ảnh
+  2. Nhấn tải lên
+- **Dữ liệu đầu vào (Test Data):**
+  ```text
+  files_count=6 (max+1 vượt biên)
+  ```
+- **Kết quả mong đợi (Expected Results):**
+  > Hệ thống từ chối và báo lỗi: 'Chỉ được phép tải lên tối đa 5 ảnh', HTTP 400
+
+---
+
+### TC-EP-11: Kiểm thử phân vùng tình trạng xe hợp lệ: Xe mới 99% nguyên bản
+- **Phân hệ (Module):** `Quản lý sản phẩm`
+- **Kỹ thuật áp dụng:** `Phân hoạch tương đương (EP)` (Chương 4)
+- **Mức độ ưu tiên:** `Medium` | **Trạng thái:** `PASSED`
+- **Tiền điều kiện (Pre-conditions):**
+  > Người bán đăng tin phân loại tình trạng xe
+- **Các bước thực hiện chi tiết (Test Steps):**
+  1. Chọn phân vùng condition = 'LIKE_NEW'
+  2. Nhập mô tả 'Xe mới 99%'
+  3. Đăng bài
+- **Dữ liệu đầu vào (Test Data):**
+  ```text
+  condition='LIKE_NEW', condition_score=99
+  ```
+- **Kết quả mong đợi (Expected Results):**
+  > Hệ thống ghi nhận trạng thái xe đạt chuẩn Like New và hiển thị nhãn uy tín
+
+---
+
+### TC-EP-12: Kiểm thử phân vùng tình trạng xe hợp lệ: Xe cũ 85% có hao mòn
+- **Phân hệ (Module):** `Quản lý sản phẩm`
+- **Kỹ thuật áp dụng:** `Phân hoạch tương đương (EP)` (Chương 4)
+- **Mức độ ưu tiên:** `Medium` | **Trạng thái:** `PASSED`
+- **Tiền điều kiện (Pre-conditions):**
+  > Người bán đăng tin phân loại tình trạng xe
+- **Các bước thực hiện chi tiết (Test Steps):**
+  1. Chọn phân vùng condition = 'GOOD'
+  2. Nhập mô tả 'Xe 85%, trầy nhẹ khung'
+  3. Đăng bài
+- **Dữ liệu đầu vào (Test Data):**
+  ```text
+  condition='GOOD', condition_score=85
+  ```
+- **Kết quả mong đợi (Expected Results):**
+  > Hệ thống chấp nhận bài đăng và hiển thị đúng nhãn độ mới
+
+---
+
+### TC-EP-13: Kiểm thử phân vùng tình trạng xe không hợp lệ: Giá trị ngoài phạm vi
+- **Phân hệ (Module):** `Bảo mật & Kiểm duyệt`
+- **Kỹ thuật áp dụng:** `Phân hoạch tương đương (EP)` (Chương 4)
+- **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
+- **Tiền điều kiện (Pre-conditions):**
+  > Người bán cố tình gửi dữ liệu condition lạ qua API
+- **Các bước thực hiện chi tiết (Test Steps):**
+  Gửi request POST /api/bikes với trường condition = 'INVALID_GRADE_XYZ'
+- **Dữ liệu đầu vào (Test Data):**
+  ```text
+  condition='INVALID_GRADE_XYZ'
+  ```
+- **Kết quả mong đợi (Expected Results):**
+  > Hệ thống validate phát hiện giá trị ngoài enum và trả về lỗi HTTP 400 Bad Request
+
+---
+
+### TC-DT-11: Quyền Người bán chỉnh sửa bài đăng khi trạng thái đang là AVAILABLE
+- **Phân hệ (Module):** `Phân quyền & Đăng tin`
+- **Kỹ thuật áp dụng:** `Bảng quyết định (Decision Table)` (Chương 4)
+- **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
+- **Tiền điều kiện (Pre-conditions):**
+  > User đăng nhập là chính chủ sở hữu bài đăng xe (seller_id khớp)
+- **Các bước thực hiện chi tiết (Test Steps):**
+  1. Mở trang quản lý my-ads.php
+  2. Chọn sửa tin
+  3. Cập nhật giá mới
+  4. Lưu thay đổi
+- **Dữ liệu đầu vào (Test Data):**
+  ```text
+  user_id == seller_id, post_status == 'AVAILABLE'
+  ```
+- **Kết quả mong đợi (Expected Results):**
+  > Hệ thống cho phép cập nhật thông tin và trả về thông báo thành công
+
+---
+
+### TC-DT-12: Quyền Người mua hủy đơn hàng khi trạng thái đơn vẫn đang là PENDING
+- **Phân hệ (Module):** `Đơn hàng & Khiếu nại`
+- **Kỹ thuật áp dụng:** `Bảng quyết định (Decision Table)` (Chương 4)
+- **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
+- **Tiền điều kiện (Pre-conditions):**
+  > Đơn hàng chưa được người bán xác nhận (status == 'PENDING')
+- **Các bước thực hiện chi tiết (Test Steps):**
+  1. Người mua vào my-orders.php
+  2. Nhấn nút Hủy Đơn
+  3. Xác nhận lý do
+- **Dữ liệu đầu vào (Test Data):**
+  ```text
+  buyer_id == order.buyer_id, order.status == 'PENDING'
+  ```
+- **Kết quả mong đợi (Expected Results):**
+  > Hệ thống chuyển trạng thái đơn sang CANCELLED và khôi phục xe về AVAILABLE
+
+---
+
+### TC-DT-13: Từ chối quyền hủy đơn khi đơn hàng đã chuyển sang trạng thái SHIPPED
+- **Phân hệ (Module):** `Bảo mật & Phân quyền`
+- **Kỹ thuật áp dụng:** `Bảng quyết định (Decision Table)` (Chương 4)
+- **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
+- **Tiền điều kiện (Pre-conditions):**
+  > Đơn hàng đang trong quá trình vận chuyển (status == 'SHIPPED')
+- **Các bước thực hiện chi tiết (Test Steps):**
+  Người mua cố tình gửi request hủy đơn
+- **Dữ liệu đầu vào (Test Data):**
+  ```text
+  buyer_id == order.buyer_id, order.status == 'SHIPPED'
+  ```
+- **Kết quả mong đợi (Expected Results):**
+  > Hệ thống từ chối với thông báo: 'Không thể hủy đơn hàng đang giao', HTTP 400
+
+---
+
+### TC-ST-11: Chuyển trạng thái đơn hàng: PENDING -> CONFIRMED khi Người bán xác nhận
+- **Phân hệ (Module):** `Vòng đời đơn hàng`
+- **Kỹ thuật áp dụng:** `Chuyển trạng thái (State Transition)` (Chương 4)
+- **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
+- **Tiền điều kiện (Pre-conditions):**
+  > Đơn hàng mới tạo đang ở trạng thái PENDING
+- **Các bước thực hiện chi tiết (Test Steps):**
+  1. Người bán truy cập manage-order.php
+  2. Nhấn nút 'Xác nhận đơn hàng'
+- **Dữ liệu đầu vào (Test Data):**
+  ```text
+  Current State = PENDING, Action = CONFIRM
+  ```
+- **Kết quả mong đợi (Expected Results):**
+  > Next State = CONFIRMED, Hệ thống gửi thông báo xác nhận cho người mua
+
+---
+
+### TC-ST-12: Chuyển trạng thái đơn hàng: CONFIRMED -> SHIPPED khi giao cho shipper
+- **Phân hệ (Module):** `Vòng đời đơn hàng`
+- **Kỹ thuật áp dụng:** `Chuyển trạng thái (State Transition)` (Chương 4)
+- **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
+- **Tiền điều kiện (Pre-conditions):**
+  > Đơn hàng đang ở trạng thái CONFIRMED
+- **Các bước thực hiện chi tiết (Test Steps):**
+  1. Người bán nhập mã vận đơn giao hàng
+  2. Nhấn 'Bàn giao vận chuyển'
+- **Dữ liệu đầu vào (Test Data):**
+  ```text
+  Current State = CONFIRMED, Action = SHIP
+  ```
+- **Kết quả mong đợi (Expected Results):**
+  > Next State = SHIPPED, Trạng thái đơn đổi thành 'Đang giao hàng'
+
+---
+
+### TC-ST-13: Chuyển trạng thái đơn hàng: SHIPPED -> COMPLETED khi Người mua nhận xe
+- **Phân hệ (Module):** `Vòng đời đơn hàng`
+- **Kỹ thuật áp dụng:** `Chuyển trạng thái (State Transition)` (Chương 4)
+- **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
+- **Tiền điều kiện (Pre-conditions):**
+  > Đơn hàng đang ở trạng thái SHIPPED
+- **Các bước thực hiện chi tiết (Test Steps):**
+  1. Người mua kiểm tra xe
+  2. Nhấn nút 'Đã nhận hàng thành công'
+- **Dữ liệu đầu vào (Test Data):**
+  ```text
+  Current State = SHIPPED, Action = COMPLETE
+  ```
+- **Kết quả mong đợi (Expected Results):**
+  > Next State = COMPLETED, Bài đăng xe tự động chuyển sang SOLD
+
+---
+
+### TC-WB-11: Kiểm thử nhánh rẽ M2-P4: Hủy đơn hàng và khôi phục trạng thái xe về AVAILABLE
+- **Phân hệ (Module):** `Xử lý Controller`
+- **Kỹ thuật áp dụng:** `Kiểm thử Hộp trắng (White-box)` (Chương 4)
+- **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
+- **Tiền điều kiện (Pre-conditions):**
+  > Hàm updateOrderStatus nhận status = 'CANCELLED'
+- **Các bước thực hiện chi tiết (Test Steps):**
+  Gọi validateAndUpdateOrderStatus với status='CANCELLED'
+- **Dữ liệu đầu vào (Test Data):**
+  ```text
+  order={seller_id:1, bike_status:'PENDING'}, new_status='CANCELLED'
+  ```
+- **Kết quả mong đợi (Expected Results):**
+  > Trạng thái order đổi thành CANCELLED và bike_status đổi thành AVAILABLE (200 OK)
+
+---
+
+### TC-WB-12: Kiểm thử nhánh rẽ M2-P5: Cập nhật trạng thái trung gian SHIPPED giữ nguyên xe
+- **Phân hệ (Module):** `Xử lý Controller`
+- **Kỹ thuật áp dụng:** `Kiểm thử Hộp trắng (White-box)` (Chương 4)
+- **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
+- **Tiền điều kiện (Pre-conditions):**
+  > Hàm updateOrderStatus nhận status = 'SHIPPED'
+- **Các bước thực hiện chi tiết (Test Steps):**
+  Gọi validateAndUpdateOrderStatus với status='SHIPPED'
+- **Dữ liệu đầu vào (Test Data):**
+  ```text
+  order={seller_id:1, bike_status:'PENDING'}, new_status='SHIPPED'
+  ```
+- **Kết quả mong đợi (Expected Results):**
+  > Trạng thái order đổi thành SHIPPED, bike_status giữ nguyên không đổi (200 OK)
+
+---
+
+### TC-UC-11: Kịch bản Tìm kiếm và Lọc xe đạp theo thương hiệu Giant và tầm giá < 10 triệu
+- **Phân hệ (Module):** `Luồng nghiệp vụ`
+- **Kỹ thuật áp dụng:** `Kiểm thử Trường hợp sử dụng (Use Case)` (Chương 4)
+- **Mức độ ưu tiên:** `Medium` | **Trạng thái:** `PASSED`
+- **Tiền điều kiện (Pre-conditions):**
+  > Người dùng ở trang chủ index.php
+- **Các bước thực hiện chi tiết (Test Steps):**
+  1. Chọn danh mục 'Xe đạp thể thao'
+  2. Chọn hãng 'Giant'
+  3. Lọc giá < 10,000,000
+  4. Xem danh sách
+- **Dữ liệu đầu vào (Test Data):**
+  ```text
+  category='Xe đạp thể thao', brand='Giant', max_price=10000000
+  ```
+- **Kết quả mong đợi (Expected Results):**
+  > Hiển thị chính xác các bài đăng xe Giant phù hợp với bộ lọc
+
+---
+
+### TC-UC-12: Kịch bản Đăng tin bán xe đạp hoàn chỉnh từ nhập thông tin đến tải ảnh
+- **Phân hệ (Module):** `Luồng nghiệp vụ`
+- **Kỹ thuật áp dụng:** `Kiểm thử Trường hợp sử dụng (Use Case)` (Chương 4)
+- **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
+- **Tiền điều kiện (Pre-conditions):**
+  > Người dùng đã đăng nhập tài khoản
+- **Các bước thực hiện chi tiết (Test Steps):**
+  1. Vào sell.php
+  2. Nhập tiêu đề, giá, chọn loại khung
+  3. Upload 3 ảnh
+  4. Nhấn Đăng tin
+- **Dữ liệu đầu vào (Test Data):**
+  ```text
+  title='Trek Marlin 7', price=12000000, images=3
+  ```
+- **Kết quả mong đợi (Expected Results):**
+  > Bài đăng xuất hiện trên sàn với trạng thái AVAILABLE, sẵn sàng giao dịch
+
+---
+
+### TC-UC-13: Kịch bản Cập nhật thông tin hồ sơ cá nhân và đổi mật khẩu tài khoản
+- **Phân hệ (Module):** `Luồng nghiệp vụ`
+- **Kỹ thuật áp dụng:** `Kiểm thử Trường hợp sử dụng (Use Case)` (Chương 4)
+- **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
+- **Tiền điều kiện (Pre-conditions):**
+  > Người dùng đã đăng nhập
+- **Các bước thực hiện chi tiết (Test Steps):**
+  1. Vào profile.php
+  2. Đổi họ tên mới
+  3. Nhập mật khẩu mới >= 6 ký tự
+  4. Nhấn Lưu
+- **Dữ liệu đầu vào (Test Data):**
+  ```text
+  name='Le Thanh Nhat', new_password='SecurePassword2026'
+  ```
+- **Kết quả mong đợi (Expected Results):**
+  > Hồ sơ cập nhật thành công, mật khẩu mới được mã hóa bcrypt trong database
+
+---
+
+
+
+---
+
+## PHẦN BỔ SUNG: 17 TEST CASES NÂNG CAO (TỔNG CỘNG: 125 TEST CASES)
+
+### TC-BVA-19: Kiểm thử biên số lượng ảnh upload khi đăng bán xe tại min = 1 ảnh
+- **Phân hệ (Module):** Đăng tin & Upload ảnh
+- **Kỹ thuật áp dụng:** Phân tích giá trị biên (BVA) (Chương 4)
+- **Mức độ ưu tiên:** High | **Trạng thái:** PASSED
+- **Tiền điều kiện (Pre-conditions):**
+  > Người dùng đã đăng nhập và đang ở trang sell.php
+- **Các bước thực hiện chi tiết (Test Steps):**
+  1. Điền thông tin xe hợp lệ
+  2. Chọn tải lên đúng 1 ảnh sản phẩm
+  3. Nhấn Đăng Bán
+- **Dữ liệu đầu vào (Test Data):**
+  `	ext
+  files_count=1 (min biên)
+  `
+- **Kết quả mong đợi (Expected Results):**
+  > Hệ thống chấp nhận upload và đăng bài thành công, HTTP 201 Created
+
+---
+
+### TC-BVA-20: Kiểm thử biên số lượng ảnh upload khi đăng bán xe tại max = 5 ảnh
+- **Phân hệ (Module):** Đăng tin & Upload ảnh
+- **Kỹ thuật áp dụng:** Phân tích giá trị biên (BVA) (Chương 4)
+- **Mức độ ưu tiên:** High | **Trạng thái:** PASSED
+- **Tiền điều kiện (Pre-conditions):**
+  > Người dùng đã đăng nhập và đang ở trang sell.php
+- **Các bước thực hiện chi tiết (Test Steps):**
+  1. Điền thông tin xe hợp lệ
+  2. Chọn tải lên đúng 5 ảnh sản phẩm
+  3. Nhấn Đăng Bán
+- **Dữ liệu đầu vào (Test Data):**
+  `	ext
+  files_count=5 (max biên)
+  `
+- **Kết quả mong đợi (Expected Results):**
+  > Hệ thống chấp nhận tải lên cả 5 ảnh và lưu trữ thành công, HTTP 201 Created
+
+---
+
+### TC-BVA-21: Kiểm thử biên số lượng ảnh upload vượt ngưỡng max+1 = 6 ảnh
+- **Phân hệ (Module):** Đăng tin & Upload ảnh
+- **Kỹ thuật áp dụng:** Phân tích giá trị biên (BVA) (Chương 4)
+- **Mức độ ưu tiên:** Medium | **Trạng thái:** PASSED
+- **Tiền điều kiện (Pre-conditions):**
+  > Người dùng đang ở form upload ảnh đăng tin
+- **Các bước thực hiện chi tiết (Test Steps):**
+  1. Chọn đồng thời 6 tệp ảnh
+  2. Nhấn tải lên
+- **Dữ liệu đầu vào (Test Data):**
+  `	ext
+  files_count=6 (max+1 vượt biên)
+  `
+- **Kết quả mong đợi (Expected Results):**
+  > Hệ thống từ chối và báo lỗi: 'Chỉ được phép tải lên tối đa 5 ảnh', HTTP 400
+
+---
+
+### TC-EP-11: Kiểm thử phân vùng tình trạng xe hợp lệ: Xe mới 99% nguyên bản
+- **Phân hệ (Module):** Quản lý sản phẩm
+- **Kỹ thuật áp dụng:** Phân hoạch tương đương (EP) (Chương 4)
+- **Mức độ ưu tiên:** Medium | **Trạng thái:** PASSED
+- **Tiền điều kiện (Pre-conditions):**
+  > Người bán đăng tin phân loại tình trạng xe
+- **Các bước thực hiện chi tiết (Test Steps):**
+  1. Chọn phân vùng condition = 'LIKE_NEW'
+  2. Nhập mô tả 'Xe mới 99%'
+  3. Đăng bài
+- **Dữ liệu đầu vào (Test Data):**
+  `	ext
+  condition='LIKE_NEW', condition_score=99
+  `
+- **Kết quả mong đợi (Expected Results):**
+  > Hệ thống ghi nhận trạng thái xe đạt chuẩn Like New và hiển thị nhãn uy tín
+
+---
+
+### TC-EP-12: Kiểm thử phân vùng tình trạng xe hợp lệ: Xe cũ 85% có hao mòn
+- **Phân hệ (Module):** Quản lý sản phẩm
+- **Kỹ thuật áp dụng:** Phân hoạch tương đương (EP) (Chương 4)
+- **Mức độ ưu tiên:** Medium | **Trạng thái:** PASSED
+- **Tiền điều kiện (Pre-conditions):**
+  > Người bán đăng tin phân loại tình trạng xe
+- **Các bước thực hiện chi tiết (Test Steps):**
+  1. Chọn phân vùng condition = 'GOOD'
+  2. Nhập mô tả 'Xe 85%, trầy nhẹ khung'
+  3. Đăng bài
+- **Dữ liệu đầu vào (Test Data):**
+  `	ext
+  condition='GOOD', condition_score=85
+  `
+- **Kết quả mong đợi (Expected Results):**
+  > Hệ thống chấp nhận bài đăng và hiển thị đúng nhãn độ mới
+
+---
+
+### TC-EP-13: Kiểm thử phân vùng tình trạng xe không hợp lệ: Giá trị ngoài phạm vi
+- **Phân hệ (Module):** Bảo mật & Kiểm duyệt
+- **Kỹ thuật áp dụng:** Phân hoạch tương đương (EP) (Chương 4)
+- **Mức độ ưu tiên:** High | **Trạng thái:** PASSED
+- **Tiền điều kiện (Pre-conditions):**
+  > Người bán cố tình gửi dữ liệu condition lạ qua API
+- **Các bước thực hiện chi tiết (Test Steps):**
+  Gửi request POST /api/bikes với trường condition = 'INVALID_GRADE_XYZ'
+- **Dữ liệu đầu vào (Test Data):**
+  `	ext
+  condition='INVALID_GRADE_XYZ'
+  `
+- **Kết quả mong đợi (Expected Results):**
+  > Hệ thống validate phát hiện giá trị ngoài enum và trả về lỗi HTTP 400 Bad Request
+
+---
+
+### TC-DT-11: Quyền Người bán chỉnh sửa bài đăng khi trạng thái đang là AVAILABLE
+- **Phân hệ (Module):** Phân quyền & Đăng tin
+- **Kỹ thuật áp dụng:** Bảng quyết định (Decision Table) (Chương 4)
+- **Mức độ ưu tiên:** High | **Trạng thái:** PASSED
+- **Tiền điều kiện (Pre-conditions):**
+  > User đăng nhập là chính chủ sở hữu bài đăng xe (seller_id khớp)
+- **Các bước thực hiện chi tiết (Test Steps):**
+  1. Mở trang quản lý my-ads.php
+  2. Chọn sửa tin
+  3. Cập nhật giá mới
+  4. Lưu thay đổi
+- **Dữ liệu đầu vào (Test Data):**
+  `	ext
+  user_id == seller_id, post_status == 'AVAILABLE'
+  `
+- **Kết quả mong đợi (Expected Results):**
+  > Hệ thống cho phép cập nhật thông tin và trả về thông báo thành công
+
+---
+
+### TC-DT-12: Quyền Người mua hủy đơn hàng khi trạng thái đơn vẫn đang là PENDING
+- **Phân hệ (Module):** Đơn hàng & Khiếu nại
+- **Kỹ thuật áp dụng:** Bảng quyết định (Decision Table) (Chương 4)
+- **Mức độ ưu tiên:** High | **Trạng thái:** PASSED
+- **Tiền điều kiện (Pre-conditions):**
+  > Đơn hàng chưa được người bán xác nhận (status == 'PENDING')
+- **Các bước thực hiện chi tiết (Test Steps):**
+  1. Người mua vào my-orders.php
+  2. Nhấn nút Hủy Đơn
+  3. Xác nhận lý do
+- **Dữ liệu đầu vào (Test Data):**
+  `	ext
+  buyer_id == order.buyer_id, order.status == 'PENDING'
+  `
+- **Kết quả mong đợi (Expected Results):**
+  > Hệ thống chuyển trạng thái đơn sang CANCELLED và khôi phục xe về AVAILABLE
+
+---
+
+### TC-DT-13: Từ chối quyền hủy đơn khi đơn hàng đã chuyển sang trạng thái SHIPPED
+- **Phân hệ (Module):** Bảo mật & Phân quyền
+- **Kỹ thuật áp dụng:** Bảng quyết định (Decision Table) (Chương 4)
+- **Mức độ ưu tiên:** High | **Trạng thái:** PASSED
+- **Tiền điều kiện (Pre-conditions):**
+  > Đơn hàng đang trong quá trình vận chuyển (status == 'SHIPPED')
+- **Các bước thực hiện chi tiết (Test Steps):**
+  Người mua cố tình gửi request hủy đơn
+- **Dữ liệu đầu vào (Test Data):**
+  `	ext
+  buyer_id == order.buyer_id, order.status == 'SHIPPED'
+  `
+- **Kết quả mong đợi (Expected Results):**
+  > Hệ thống từ chối với thông báo: 'Không thể hủy đơn hàng đang giao', HTTP 400
+
+---
+
+### TC-ST-11: Chuyển trạng thái đơn hàng: PENDING -> CONFIRMED khi Người bán xác nhận
+- **Phân hệ (Module):** Vòng đời đơn hàng
+- **Kỹ thuật áp dụng:** Chuyển trạng thái (State Transition) (Chương 4)
+- **Mức độ ưu tiên:** High | **Trạng thái:** PASSED
+- **Tiền điều kiện (Pre-conditions):**
+  > Đơn hàng mới tạo đang ở trạng thái PENDING
+- **Các bước thực hiện chi tiết (Test Steps):**
+  1. Người bán truy cập manage-order.php
+  2. Nhấn nút 'Xác nhận đơn hàng'
+- **Dữ liệu đầu vào (Test Data):**
+  `	ext
+  Current State = PENDING, Action = CONFIRM
+  `
+- **Kết quả mong đợi (Expected Results):**
+  > Next State = CONFIRMED, Hệ thống gửi thông báo xác nhận cho người mua
+
+---
+
+### TC-ST-12: Chuyển trạng thái đơn hàng: CONFIRMED -> SHIPPED khi giao cho shipper
+- **Phân hệ (Module):** Vòng đời đơn hàng
+- **Kỹ thuật áp dụng:** Chuyển trạng thái (State Transition) (Chương 4)
+- **Mức độ ưu tiên:** High | **Trạng thái:** PASSED
+- **Tiền điều kiện (Pre-conditions):**
+  > Đơn hàng đang ở trạng thái CONFIRMED
+- **Các bước thực hiện chi tiết (Test Steps):**
+  1. Người bán nhập mã vận đơn giao hàng
+  2. Nhấn 'Bàn giao vận chuyển'
+- **Dữ liệu đầu vào (Test Data):**
+  `	ext
+  Current State = CONFIRMED, Action = SHIP
+  `
+- **Kết quả mong đợi (Expected Results):**
+  > Next State = SHIPPED, Trạng thái đơn đổi thành 'Đang giao hàng'
+
+---
+
+### TC-ST-13: Chuyển trạng thái đơn hàng: SHIPPED -> COMPLETED khi Người mua nhận xe
+- **Phân hệ (Module):** Vòng đời đơn hàng
+- **Kỹ thuật áp dụng:** Chuyển trạng thái (State Transition) (Chương 4)
+- **Mức độ ưu tiên:** High | **Trạng thái:** PASSED
+- **Tiền điều kiện (Pre-conditions):**
+  > Đơn hàng đang ở trạng thái SHIPPED
+- **Các bước thực hiện chi tiết (Test Steps):**
+  1. Người mua kiểm tra xe
+  2. Nhấn nút 'Đã nhận hàng thành công'
+- **Dữ liệu đầu vào (Test Data):**
+  `	ext
+  Current State = SHIPPED, Action = COMPLETE
+  `
+- **Kết quả mong đợi (Expected Results):**
+  > Next State = COMPLETED, Bài đăng xe tự động chuyển sang SOLD
+
+---
+
+### TC-WB-11: Kiểm thử nhánh rẽ M2-P4: Hủy đơn hàng và khôi phục trạng thái xe về AVAILABLE
+- **Phân hệ (Module):** Xử lý Controller
+- **Kỹ thuật áp dụng:** Kiểm thử Hộp trắng (White-box) (Chương 4)
+- **Mức độ ưu tiên:** High | **Trạng thái:** PASSED
+- **Tiền điều kiện (Pre-conditions):**
+  > Hàm updateOrderStatus nhận status = 'CANCELLED'
+- **Các bước thực hiện chi tiết (Test Steps):**
+  Gọi validateAndUpdateOrderStatus với status='CANCELLED'
+- **Dữ liệu đầu vào (Test Data):**
+  `	ext
+  order={seller_id:1, bike_status:'PENDING'}, new_status='CANCELLED'
+  `
+- **Kết quả mong đợi (Expected Results):**
+  > Trạng thái order đổi thành CANCELLED và bike_status đổi thành AVAILABLE (200 OK)
+
+---
+
+### TC-WB-12: Kiểm thử nhánh rẽ M2-P5: Cập nhật trạng thái trung gian SHIPPED giữ nguyên xe
+- **Phân hệ (Module):** Xử lý Controller
+- **Kỹ thuật áp dụng:** Kiểm thử Hộp trắng (White-box) (Chương 4)
+- **Mức độ ưu tiên:** High | **Trạng thái:** PASSED
+- **Tiền điều kiện (Pre-conditions):**
+  > Hàm updateOrderStatus nhận status = 'SHIPPED'
+- **Các bước thực hiện chi tiết (Test Steps):**
+  Gọi validateAndUpdateOrderStatus với status='SHIPPED'
+- **Dữ liệu đầu vào (Test Data):**
+  `	ext
+  order={seller_id:1, bike_status:'PENDING'}, new_status='SHIPPED'
+  `
+- **Kết quả mong đợi (Expected Results):**
+  > Trạng thái order đổi thành SHIPPED, bike_status giữ nguyên không đổi (200 OK)
+
+---
+
+### TC-UC-11: Kịch bản Tìm kiếm và Lọc xe đạp theo thương hiệu Giant và tầm giá < 10 triệu
+- **Phân hệ (Module):** Luồng nghiệp vụ
+- **Kỹ thuật áp dụng:** Kiểm thử Trường hợp sử dụng (Use Case) (Chương 4)
+- **Mức độ ưu tiên:** Medium | **Trạng thái:** PASSED
+- **Tiền điều kiện (Pre-conditions):**
+  > Người dùng ở trang chủ index.php
+- **Các bước thực hiện chi tiết (Test Steps):**
+  1. Chọn danh mục 'Xe đạp thể thao'
+  2. Chọn hãng 'Giant'
+  3. Lọc giá < 10,000,000
+  4. Xem danh sách
+- **Dữ liệu đầu vào (Test Data):**
+  `	ext
+  category='Xe đạp thể thao', brand='Giant', max_price=10000000
+  `
+- **Kết quả mong đợi (Expected Results):**
+  > Hiển thị chính xác các bài đăng xe Giant phù hợp với bộ lọc
+
+---
+
+### TC-UC-12: Kịch bản Đăng tin bán xe đạp hoàn chỉnh từ nhập thông tin đến tải ảnh
+- **Phân hệ (Module):** Luồng nghiệp vụ
+- **Kỹ thuật áp dụng:** Kiểm thử Trường hợp sử dụng (Use Case) (Chương 4)
+- **Mức độ ưu tiên:** High | **Trạng thái:** PASSED
+- **Tiền điều kiện (Pre-conditions):**
+  > Người dùng đã đăng nhập tài khoản
+- **Các bước thực hiện chi tiết (Test Steps):**
+  1. Vào sell.php
+  2. Nhập tiêu đề, giá, chọn loại khung
+  3. Upload 3 ảnh
+  4. Nhấn Đăng tin
+- **Dữ liệu đầu vào (Test Data):**
+  `	ext
+  title='Trek Marlin 7', price=12000000, images=3
+  `
+- **Kết quả mong đợi (Expected Results):**
+  > Bài đăng xuất hiện trên sàn với trạng thái AVAILABLE, sẵn sàng giao dịch
+
+---
+
+### TC-UC-13: Kịch bản Cập nhật thông tin hồ sơ cá nhân và đổi mật khẩu tài khoản
+- **Phân hệ (Module):** Luồng nghiệp vụ
+- **Kỹ thuật áp dụng:** Kiểm thử Trường hợp sử dụng (Use Case) (Chương 4)
+- **Mức độ ưu tiên:** High | **Trạng thái:** PASSED
+- **Tiền điều kiện (Pre-conditions):**
+  > Người dùng đã đăng nhập
+- **Các bước thực hiện chi tiết (Test Steps):**
+  1. Vào profile.php
+  2. Đổi họ tên mới
+  3. Nhập mật khẩu mới >= 6 ký tự
+  4. Nhấn Lưu
+- **Dữ liệu đầu vào (Test Data):**
+  `	ext
+  name='Le Thanh Nhat', new_password='SecurePassword2026'
+  `
+- **Kết quả mong đợi (Expected Results):**
+  > Hồ sơ cập nhật thành công, mật khẩu mới được mã hóa bcrypt trong database
 
 ---
 

@@ -2,13 +2,21 @@
  BẮT ĐẦU CHẠY KIỂM THỬ HỘP TRẮNG (WHITE-BOX BASIS PATH TESTING) - CHƯƠNG 4
 ======================================================================
 
-[PASS] Path 1: Nhánh rẽ 1: Kiểm thử thiếu trường dữ liệu đầu vào (post_id null)
-[PASS] Path 2: Nhánh rẽ 2: Kiểm thử phương thức thanh toán không hợp lệ (CRYPTO)
-[PASS] Path 3: Nhánh rẽ 3: Kiểm thử bài đăng xe không tồn tại hoặc đã bị hủy (post null)
-[PASS] Path 4: Nhánh rẽ 4: Kiểm thử ngăn người bán tự mua xe của chính mình (seller_id === buyer_id)
-[PASS] Path 5: Nhánh rẽ 5: Kiểm thử đặt hàng thành công phương thức COD (payment_status: SUCCESS)
-[PASS] Path 6: Nhánh rẽ 6: Kiểm thử đặt hàng thành công phương thức VNPAY (payment_status: PENDING)
+--- PHÂN HỆ 1: TẠO ĐƠN HÀNG (paymentController.createOrder) ---
+[PASS] Path 1: M1-P1: Kiểm thử thiếu trường dữ liệu đầu vào (post_id null)
+[PASS] Path 2: M1-P2: Kiểm thử phương thức thanh toán không hợp lệ (CRYPTO)
+[PASS] Path 3: M1-P3: Kiểm thử bài đăng xe không tồn tại hoặc đã bị hủy (post null)
+[PASS] Path 4: M1-P4: Kiểm thử ngăn người bán tự mua xe của chính mình (seller_id === buyer_id)
+[PASS] Path 5: M1-P5: Kiểm thử đặt hàng thành công phương thức COD (payment_status: SUCCESS)
+[PASS] Path 6: M1-P6: Kiểm thử đặt hàng thành công phương thức VNPAY (payment_status: PENDING)
+
+--- PHÂN HỆ 2: CẬP NHẬT TRẠNG THÁI (paymentController.updateOrderStatus) ---
+[PASS] Path 7: M2-P1: Kiểm thử không tìm thấy đơn hàng cần cập nhật (order null)
+[PASS] Path 8: M2-P2: Kiểm thử người không phải người bán cố tình cập nhật (403 Forbidden)
+[PASS] Path 9: M2-P3: Người bán cập nhật COMPLETED -> xe tự động chuyển sang SOLD
+[PASS] Path 10: M2-P4: Người bán cập nhật CANCELLED -> xe tự động khôi phục AVAILABLE
+[PASS] Path 11: M2-P5: Người bán cập nhật trạng thái trung gian SHIPPED -> giữ nguyên trạng thái xe
 
 ----------------------------------------------------------------------
- KẾT QUẢ KIỂM THỬ: 6/6 PATHS PASSED (ĐỘ PHỦ NHÁNH BRANCH COVERAGE: 100%)
+ KẾT QUẢ KIỂM THỬ: 11/11 PATHS PASSED (ĐỘ PHỦ NHÁNH BRANCH COVERAGE: 100%)
 ======================================================================

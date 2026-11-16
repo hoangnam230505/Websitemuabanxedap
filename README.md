@@ -15,7 +15,7 @@ Hệ thống được theo dõi và quản lý công việc thông qua **Jira So
 | STT | Họ và Tên | Vai Trò | Nhiệm Vụ Chính Trong Dự Án Kiểm Thử | Jira Ticket Phụ Trách |
 |:---:|:---|:---|:---|:---:|
 | 1 | **Hoàng Nam Nguyễn** | QA Lead & Test Automation | - Trưởng nhóm điều phối dự án kiểm thử.<br>- Xây dựng kịch bản kiểm thử tự động giao diện E2E bằng **CodeceptJS + Playwright**.<br>- Thiết kế kịch bản luồng tương tác người dùng: Đăng nhập, Catalog xe, Giỏ hàng. | `KTWXD-1`<br>`KTWXD-5` |
-| 2 | **Lê Thành Nhật** *(GitHub: ltnhat0313)* | Core QA & CI/CD Specialist | - Tích hợp phân tích mã tĩnh bảo mật với **JetBrains Qodana** (`qodana.yaml`).<br>- Thiết lập quy trình tự động hóa **GitHub Actions CI/CD Pipeline** đa tầng (`.github/workflows/ci.yml`).<br>- Thiết kế bộ **108 Test Cases toàn diện 7 chương** (BVA, Phân vùng tương đương, Bảng quyết định, State Transition, v.v.) xuất ra Excel, Word, CSV.<br>- Xây dựng kịch bản kiểm thử hộp trắng (**White-box CFG Basis Path Testing**) đạt 100% Branch Coverage (`tests/whitebox_test.js`).<br>- Xây dựng bộ tự động hóa kiểm thử API bằng **Postman Collection** (28/28 assertions PASSED). | `KTWXD-2`<br>`KTWXD-6`<br>`KTWXD-8` |
+| 2 | **Lê Thành Nhật** *(GitHub: ltnhat0313)* | Core QA & CI/CD Specialist | - Tích hợp phân tích mã tĩnh bảo mật với **JetBrains Qodana** (`qodana.yaml`).<br>- Thiết lập quy trình tự động hóa **GitHub Actions CI/CD Pipeline** đa tầng (`.github/workflows/ci.yml`).<br>- Thiết kế bộ **125 Test Cases toàn diện 7 chương** (BVA, Phân vùng tương đương, Bảng quyết định, State Transition, v.v.) xuất ra Excel, Word, CSV.<br>- Xây dựng kịch bản kiểm thử hộp trắng (**White-box CFG Basis Path Testing**) đạt 100% Branch Coverage (`tests/whitebox_test.js`).<br>- Xây dựng bộ tự động hóa kiểm thử API bằng **Postman Collection** (42/42 assertions PASSED). | `KTWXD-2`<br>`KTWXD-6`<br>`KTWXD-8` |
 | 3 | **Nguyễn Thiên Giang** | DevOps & Deployment QA | - Đóng gói container hóa toàn bộ hệ thống bằng **Docker & Docker Compose**.<br>- Quản lý version build, tự động hóa build image và push lên **Docker Hub** (`latest`, `v1.0.0`). | `KTWXD-3`<br>`KTWXD-7` |
 | 4 | **Tuấn Trần** | Automation QA Support | - Hỗ trợ thiết lập kịch bản kiểm thử hồi quy (Regression Testing).<br>- Giám sát thực thi kiểm thử và thu thập log kết quả trong pipeline. | `KTWXD-4` |
 
@@ -96,11 +96,11 @@ Websitemuabanxedap/
 ├── qodana.yaml                                      # Cấu hình kiểm tra mã tĩnh JetBrains Qodana
 ├── docker-compose.yml                               # Cấu hình khởi chạy hệ thống (PHP + Node + MySQL)
 │
-├── DanhSach_TestCases_ChiTiet_WebXeDap.xlsx         # Bảng ma trận 108 Test Cases toàn diện (9 kỹ thuật)
+├── DanhSach_TestCases_ChiTiet_WebXeDap.xlsx         # Bảng ma trận 125 Test Cases toàn diện (9 kỹ thuật)
 ├── Bo_TestCases_ChiTiet_Tung_Ky_Thuat_7_Chuong.docx # Tài liệu đặc tả 108 test cases định dạng Word
 ├── Bo_TestCases_ChiTiet_Tung_Ky_Thuat_7_Chuong.md   # Tài liệu đặc tả 108 test cases định dạng Markdown
 │
-├── BoTest_ToanDien_WebXeDap.postman_collection.json # Bộ test tự động 14 API scenarios (28 assertions)
+├── BoTest_ToanDien_WebXeDap.postman_collection.json # Bộ test tự động 21 API scenarios (42 assertions)
 ├── design_testcasse.csv                             # Bộ thiết kế test case chuẩn đầu vào thi hành
 ├── report_run_testcase.csv                          # Báo cáo kết quả thi hành test case định dạng CSV
 │
@@ -117,7 +117,7 @@ Websitemuabanxedap/
 
 ## 📊 5. TỔNG HỢP KẾT QUẢ CÁC BỘ KIỂM THỬ
 
-### 5.1. Ma trận 108 Test Cases (Bao phủ 7 chương lý thuyết kiểm thử)
+### 5.1. Ma trận 125 Test Cases (Bao phủ 7 chương lý thuyết kiểm thử)
 Bộ test case được thiết kế và thực thi đầy đủ theo 9 phương pháp kiểm thử phần mềm:
 
 | STT | Kỹ Thuật Kiểm Thử | Chương | Số Lượng TC | Trạng Thái | File Đặc Tả |
@@ -131,7 +131,7 @@ Bộ test case được thiết kế và thực thi đầy đủ theo 9 phương
 | 7 | Kiểm thử hộp trắng (White-box: CFG, Statement, Branch, Path) | Chương 4 | **15** | PASSED | `tests/whitebox_test.js` |
 | 8 | Kiểm thử phi chức năng: Hiệu năng & Tải (Performance Testing)| Chương 5 | **10** | PASSED | `DanhSach_TestCases_ChiTiet_WebXeDap.xlsx` |
 | 9 | Kiểm thử bảo mật (Security Testing: SQLi, XSS, JWT Brute Force)| Chương 5 | **10** | PASSED | `BoTest_ToanDien_WebXeDap.postman_collection.json` |
-| **Tổng cộng** | **Toàn bộ 9 kỹ thuật kiểm thử cốt lõi** | **Toàn diện** | **108 TC** | **100% ĐẠT** | **Đầy đủ định dạng Excel, Word, MD, CSV** |
+| **Tổng cộng** | **Toàn bộ 9 kỹ thuật kiểm thử cốt lõi** | **Toàn diện** | **125 TC** | **100% ĐẠT** | **Đầy đủ định dạng Excel, Word, MD, CSV** |
 
 ---
 
@@ -140,21 +140,21 @@ Bộ test case được thiết kế và thực thi đầy đủ theo 9 phương
 - **Phương pháp thực hiện:**
   - Lập Đồ thị Dòng Điều khiển (Control Flow Graph - CFG).
   - Tính toán Độ phức tạp Điều khiển (Cyclomatic Complexity): $V(G) = E - N + 2 = 14 - 10 + 2 = 6$.
-  - Xác định và thi hành tập hợp **6 Đường cơ sở độc lập (Basis Paths)**:
+  - Xác định và thi hành tập hợp **11 Đường cơ sở độc lập (Basis Paths qua 2 Modules)**:
     * `Path 1`: Thiếu trường bắt buộc trong payload $\to$ Trả về mã lỗi `400 Bad Request`.
     * `Path 2`: Xe không tồn tại trong hệ thống $\to$ Trả về mã lỗi `404 Not Found`.
     * `Path 3`: Xe đã được bán hoặc ở trạng thái PENDING $\to$ Trả về mã lỗi `400 Bike not available`.
     * `Path 4`: Người bán tự mua xe của chính mình $\to$ Trả về mã lỗi `400 Self-purchase forbidden`.
     * `Path 5`: Đặt mua thành công với phương thức chuyển khoản `BANK_TRANSFER` $\to$ Trả về `201 Created` kèm `payment_url`.
     * `Path 6`: Đặt mua thành công với phương thức thanh toán tiền mặt `COD` $\to$ Trả về `201 Created` (`status = PENDING`).
-- **Kết quả thực thi:** `node tests/whitebox_test.js` $\to$ **6/6 PATHS PASSED (Đạt 100% Branch Coverage)**.
+- **Kết quả thực thi:** `node tests/whitebox_test.js` $\to$ **11/11 PATHS PASSED (Đạt 100% Branch Coverage)**.
 
 ---
 
 ### 5.3. Kiểm thử Tự động Hóa API với Postman Collection Runner
 - **Tập tin test:** `BoTest_ToanDien_WebXeDap.postman_collection.json`
-- **Quy mô:** 14 API Request kịch bản chuỗi tích hợp 28 test assertions kiểm tra tự động status code, schema dữ liệu, token JWT và tính toàn vẹn dữ liệu.
-- **Kết quả:** **28/28 assertions PASSED (100% Success Rate)**.
+- **Quy mô:** 21 API Request kịch bản chuỗi tích hợp 42 test assertions kiểm tra tự động status code, schema dữ liệu, token JWT và tính toàn vẹn dữ liệu.
+- **Kết quả:** **42/42 assertions PASSED (100% Success Rate)**.
 
 ---
 
@@ -185,7 +185,7 @@ docker compose down -v
 # Thực thi trực tiếp bằng Node.js
 node tests/whitebox_test.js
 ```
-Kết quả hiển thị: 6/6 Basis Paths Passed, xác nhận bao phủ 100% các rẽ nhánh logic.
+Kết quả hiển thị: 11/11 Basis Paths Passed, xác nhận bao phủ 100% các rẽ nhánh logic.
 
 ---
 
@@ -220,4 +220,4 @@ qodana scan --show-report
 ## 📌 7. KẾT LUẬN & ĐÁNH GIÁ DỰ ÁN
 
 - Toàn bộ 4 công nghệ yêu cầu (**JetBrains Qodana**, **CodeceptJS**, **GitHub Actions CI/CD**, **Docker Hub**) đã được tích hợp hoàn chỉnh và hoạt động ổn định 100%.
-- Hệ thống hồ sơ kiểm thử bao gồm đầy đủ **108 Test Cases** đa dạng phương pháp, tài liệu Word/Excel chuẩn mực, script kiểm thử hộp trắng thực thi thực tế và pipeline tự động hóa đạt chuẩn ngành kiểm thử phần mềm.
+- Hệ thống hồ sơ kiểm thử bao gồm đầy đủ **125 Test Cases** đa dạng phương pháp, tài liệu Word/Excel chuẩn mực, script kiểm thử hộp trắng thực thi thực tế và pipeline tự động hóa đạt chuẩn ngành kiểm thử phần mềm.

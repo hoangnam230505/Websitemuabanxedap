@@ -4,50 +4,80 @@ Kiểm Thử Toàn Diện Web Mua Bán Xe Đạp - UTH
 
 □ 1. Phân Hệ Xác Thực & Tài Khoản (Auth & Profile)
 └ TC-AUTH-01: Đăng ký tài khoản mới thành công
-  POST http://localhost:5000/api/auth/register [201 Created, 314B, 136ms]
+  POST http://localhost:5000/api/auth/register [201 Created, 314B, 132ms]
   √  Status code is 201 Created or 200
   √  Đăng ký tài khoản thành công
 
 └ TC-AUTH-02: Đăng ký thất bại - Mật khẩu dưới biên (BVA min-1 = 5 ký tự)
-  POST http://localhost:5000/api/auth/register [400 Bad Request, 331B, 8ms]
+  POST http://localhost:5000/api/auth/register [400 Bad Request, 331B, 4ms]
   √  Status code is 400 Bad Request
   √  Thông báo lỗi mật khẩu ít nhất 6 ký tự
 
 └ TC-AUTH-06: Đăng nhập thành công và lưu JWT Token
-  POST http://localhost:5000/api/auth/login [200 OK, 475B, 89ms]
+  POST http://localhost:5000/api/auth/login [200 OK, 475B, 85ms]
   √  Status code is 200 OK
   √  Trả về token JWT hợp lệ
 
 └ TC-AUTH-07: Đăng nhập thất bại khi nhập sai mật khẩu
-  POST http://localhost:5000/api/auth/login [401 Unauthorized, 316B, 92ms]
+  POST http://localhost:5000/api/auth/login [401 Unauthorized, 316B, 86ms]
   √  Status code is 401 Unauthorized
   √  Thông báo sai email hoặc mật khẩu
 
 └ TC-AUTH-09: Chặn truy cập profile khi thiếu Bearer Token
-  GET http://localhost:5000/api/users/profile [401 Unauthorized, 306B, 6ms]
+  GET http://localhost:5000/api/users/profile [401 Unauthorized, 306B, 3ms]
   √  Status code is 401 Unauthorized
   √  Từ chối truy cập khi chưa gửi Token
 
+└ TC-AUTH-10: Lấy thông tin cá nhân với JWT Token hợp lệ
+  GET http://localhost:5000/api/users/profile [200 OK, 485B, 6ms]
+  √  Status code is 200 OK
+  √  Thong tin profile tra ve hop le
+
+└ TC-AUTH-11: Cập nhật thông tin cá nhân (Profile)
+  PUT http://localhost:5000/api/users/profile [200 OK, 309B, 6ms]
+  √  Status code is 200 OK
+  √  Cap nhat thong tin profile thanh cong
+
 □ 2. Phân Hệ Danh Mục & Tìm Kiếm (Catalog & Search)
 └ TC-CAT-01: Lấy danh sách danh mục xe đạp
-  GET http://localhost:5000/api/categories [200 OK, 482B, 7ms]
+  GET http://localhost:5000/api/categories [200 OK, 482B, 4ms]
   √  Status code is 200 OK
   √  Trả về danh sách danh mục thành công
 
 └ TC-CAT-02: Lấy danh sách hãng sản xuất xe
-  GET http://localhost:5000/api/brands [200 OK, 539B, 7ms]
+  GET http://localhost:5000/api/brands [200 OK, 539B, 5ms]
   √  Status code is 200 OK
   √  Trả về danh sách thương hiệu thành công
 
 └ TC-SRCH-01: Tìm kiếm xe theo từ khóa
-  GET http://localhost:5000/api/bikes?keyword=xe [200 OK, 3.37kB, 10ms]
+  GET http://localhost:5000/api/bikes?keyword=xe [200 OK, 3.49kB, 8ms]
   √  Status code is 200 OK
   √  Tìm kiếm xe trả về kết quả hợp lệ
 
 └ TC-SRCH-05: Kiểm tra phân trang (Pagination limit=5)
-  GET http://localhost:5000/api/bikes?limit=5 [200 OK, 1.93kB, 9ms]
+  GET http://localhost:5000/api/bikes?limit=5 [200 OK, 1.93kB, 5ms]
   √  Status code is 200 OK
   √  Dữ liệu phân trang hợp lệ
+
+└ TC-CAT-03: Lấy chi tiết xe đạp theo ID hợp lệ
+  GET http://localhost:5000/api/bikes/15 [200 OK, 769B, 6ms]
+  √  Status code is 200 OK
+  √  Tra ve dung chi tiet bai dang xe
+
+└ TC-CAT-04: Lấy chi tiết xe không tồn tại (Kiểm thử 404 Not Found)
+  GET http://localhost:5000/api/bikes/99999 [404 Not Found, 314B, 3ms]
+  √  Status code is 404 Not Found
+  √  He thong bao khong tim thay bai dang
+
+└ TC-CAT-05: Lấy số liệu thống kê tổng thể sàn xe
+  GET http://localhost:5000/api/stats [200 OK, 533B, 4ms]
+  √  Status code is 200 OK
+  √  Thong ke tra ve du lieu mang danh muc
+
+└ TC-SEC-01: Kiểm thử an toàn thông tin SQL Injection trên bộ lọc tìm kiếm
+  GET http://localhost:5000/api/bikes?keyword=%27+OR+%271%27=%271 [200 OK, 377B, 5ms]
+  √  Status code is 200 OK an toan
+  √  He thong khong bi sap hay ro ri cu phap SQL
 
 □ 3. Phân Hệ Đăng Tin & Bài Đăng (Bike Posts)
 └ TC-POST-01: Đăng tin bán xe mới thành công
@@ -56,42 +86,47 @@ Kiểm Thử Toàn Diện Web Mua Bán Xe Đạp - UTH
   √  Đăng tin bán xe thành công
 
 └ TC-POST-02: Đăng tin thất bại khi thiếu thông tin bắt buộc
-  POST http://localhost:5000/api/bikes [400 Bad Request, 355B, 6ms]
+  POST http://localhost:5000/api/bikes [400 Bad Request, 355B, 3ms]
   √  Status code is 400 Bad Request
   √  Hệ thống từ chối khi thiếu tiêu đề và giá
 
 □ 4. Phân Hệ Đơn Hàng & Thanh Toán (Orders & Payments)
 └ TC-ORD-01: Đặt mua xe thành công với phương thức COD
-  POST http://localhost:5000/api/orders [201 Created, 383B, 11ms]
+  POST http://localhost:5000/api/orders [201 Created, 385B, 8ms]
   √  Status code is 201 Created or 200
   √  Đặt hàng thành công với COD
 
 └ TC-ORD-04: Chặn đặt hàng với phương thức không hỗ trợ
-  POST http://localhost:5000/api/orders [400 Bad Request, 380B, 6ms]
+  POST http://localhost:5000/api/orders [400 Bad Request, 380B, 2ms]
   √  Status code is 400 Bad Request
   √  Hệ thống từ chối phương thức thanh toán lạ
 
 └ TC-ORD-08: Xem lịch sử đơn hàng của tôi (My Orders)
-  GET http://localhost:5000/api/orders/my [200 OK, 644B, 8ms]
+  GET http://localhost:5000/api/orders/my [200 OK, 645B, 4ms]
   √  Status code is 200 OK
   √  Lấy danh sách đơn hàng của tôi thành công
+
+└ TC-ORD-09: Xem chi tiết danh sách đơn hàng của tôi (My Orders)
+  GET http://localhost:5000/api/orders/my [200 OK, 645B, 4ms]
+  √  Status code is 200 OK
+  √  Danh sach don hang tra ve mang hop le
 
 ┌─────────────────────────┬───────────────────┬──────────────────┐
 │                         │          executed │           failed │
 ├─────────────────────────┼───────────────────┼──────────────────┤
 │              iterations │                 1 │                0 │
 ├─────────────────────────┼───────────────────┼──────────────────┤
-│                requests │                14 │                0 │
+│                requests │                21 │                0 │
 ├─────────────────────────┼───────────────────┼──────────────────┤
-│            test-scripts │                14 │                0 │
+│            test-scripts │                21 │                0 │
 ├─────────────────────────┼───────────────────┼──────────────────┤
 │      prerequest-scripts │                 1 │                0 │
 ├─────────────────────────┼───────────────────┼──────────────────┤
-│              assertions │                28 │                0 │
+│              assertions │                42 │                0 │
 ├─────────────────────────┴───────────────────┴──────────────────┤
-│ total run duration: 987ms                                      │
+│ total run duration: 1414ms                                     │
 ├────────────────────────────────────────────────────────────────┤
-│ total data received: 6.78kB (approx)                           │
+│ total data received: 8.67kB (approx)                           │
 ├────────────────────────────────────────────────────────────────┤
-│ average response time: 29ms [min: 6ms, max: 136ms, s.d.: 41ms] │
+│ average response time: 18ms [min: 2ms, max: 132ms, s.d.: 34ms] │
 └────────────────────────────────────────────────────────────────┘
