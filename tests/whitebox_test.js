@@ -1,5 +1,5 @@
 /**
- * KIỂM THỬ HỘP TRẮNG (WHITE-BOX TESTING) - CHƯƠNG 4
+ * KIỂM THỬ HỘP TRẮNG (WHITE-BOX TESTING)
  * Áp dụng kỹ thuật: Đồ thị luồng điều khiển (CFG) & Độ phức tạp Cyclomatic (Basis Path Testing)
  * Bao phủ 2 Module cốt lõi:
  *   - Module 1: Xử lý giao dịch đơn hàng & Thanh toán (paymentController.createOrder) -> 6 Basis Paths
@@ -98,7 +98,7 @@ function validateAndUpdateOrderStatus({ order, user_id, new_status }) {
 // TEST RUNNER THỰC THI KIỂM THỬ HỘP TRẮNG
 // ======================================================================
 console.log('======================================================================');
-console.log(' BẮT ĐẦU CHẠY KIỂM THỬ HỘP TRẮNG (WHITE-BOX BASIS PATH TESTING) - CHƯƠNG 4');
+console.log(' BẮT ĐẦU CHẠY KIỂM THỬ HỘP TRẮNG (WHITE-BOX BASIS PATH TESTING)');
 console.log('======================================================================\n');
 
 let totalTests = 0;

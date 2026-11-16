@@ -14,7 +14,7 @@
 | 1 | **Kiểm thử Hộp trắng (White-box)** | `tests/whitebox_test.js` (CFG Basis Path Testing) | **11 Đường cơ sở (2 Modules)** | **11/11 PASSED** | **100% (Branch Coverage: 100%)** |
 | 2 | **Kiểm thử API Tự động (Integration)** | `BoTest_ToanDien_WebXeDap.postman_collection.json` via Newman | **21 Scenarios / 42 Assertions** | **42/42 PASSED** | **100% (0 Failed)** |
 | 3 | **Kiểm thử Giao diện E2E (BDD)** | `tests/auth_test.js` via CodeceptJS + Playwright Chromium | **10 Scenarios Toàn Hệ Thống** | **10/10 PASSED** | **100% (Green All Scenarios)** |
-| 4 | **Đặc tả Test Case chuẩn 7 chương** | `DanhSach_TestCases_ChiTiet_WebXeDap.xlsx` & Docs | **125 Test Cases Toàn Diện** | **125/125 ĐẠT** | **100% Nghiệm thu** |
+| 4 | **Đặc tả Test Case theo các kỹ thuật kiểm thử** | `DanhSach_TestCases_ChiTiet_WebXeDap.xlsx` & Docs | **125 Test Cases Toàn Diện** | **125/125 ĐẠT** | **100% Nghiệm thu** |
 
 ---
 
@@ -26,7 +26,7 @@
 
 ```text
 ======================================================================
- BẮT ĐẦU CHẠY KIỂM THỬ HỘP TRẮNG (WHITE-BOX BASIS PATH TESTING) - CHƯƠNG 4
+ BẮT ĐẦU CHẠY KIỂM THỬ HỘP TRẮNG (WHITE-BOX BASIS PATH TESTING)
 ======================================================================
 
 --- PHÂN HỆ 1: TẠO ĐƠN HÀNG (paymentController.createOrder) ---

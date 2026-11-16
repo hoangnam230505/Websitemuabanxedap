@@ -1,5 +1,5 @@
 ======================================================================
- BẮT ĐẦU CHẠY KIỂM THỬ HỘP TRẮNG (WHITE-BOX BASIS PATH TESTING) - CHƯƠNG 4
+ BẮT ĐẦU CHẠY KIỂM THỬ HỘP TRẮNG (WHITE-BOX BASIS PATH TESTING)
 ======================================================================
 
 --- PHÂN HỆ 1: TẠO ĐƠN HÀNG (paymentController.createOrder) ---

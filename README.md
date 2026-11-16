@@ -15,7 +15,7 @@ Hệ thống được theo dõi và quản lý công việc thông qua **Jira So
 | STT | Họ và Tên | Vai Trò | Nhiệm Vụ Chính Trong Dự Án Kiểm Thử | Jira Ticket Phụ Trách |
 |:---:|:---|:---|:---|:---:|
 | 1 | **Hoàng Nam Nguyễn** | QA Lead & Test Automation | - Trưởng nhóm điều phối dự án kiểm thử.<br>- Xây dựng kịch bản kiểm thử tự động giao diện E2E bằng **CodeceptJS + Playwright**.<br>- Thiết kế kịch bản luồng tương tác người dùng: Đăng nhập, Catalog xe, Giỏ hàng. | `KTWXD-1`<br>`KTWXD-5` |
-| 2 | **Lê Thành Nhật** *(GitHub: ltnhat0313)* | Core QA & CI/CD Specialist | - Tích hợp phân tích mã tĩnh bảo mật với **JetBrains Qodana** (`qodana.yaml`).<br>- Thiết lập quy trình tự động hóa **GitHub Actions CI/CD Pipeline** đa tầng (`.github/workflows/ci.yml`).<br>- Thiết kế bộ **125 Test Cases toàn diện 7 chương** (BVA, Phân vùng tương đương, Bảng quyết định, State Transition, v.v.) xuất ra Excel, Word, CSV.<br>- Xây dựng kịch bản kiểm thử hộp trắng (**White-box CFG Basis Path Testing**) đạt 100% Branch Coverage (`tests/whitebox_test.js`).<br>- Xây dựng bộ tự động hóa kiểm thử API bằng **Postman Collection** (42/42 assertions PASSED). | `KTWXD-2`<br>`KTWXD-6`<br>`KTWXD-8` |
+| 2 | **Lê Thành Nhật** *(GitHub: ltnhat0313)* | Core QA & CI/CD Specialist | - Tích hợp phân tích mã tĩnh bảo mật với **JetBrains Qodana** (`qodana.yaml`).<br>- Thiết lập quy trình tự động hóa **GitHub Actions CI/CD Pipeline** đa tầng (`.github/workflows/ci.yml`).<br>- Thiết kế bộ **125 Test Cases toàn diện theo các kỹ thuật kiểm thử cốt lõi** (BVA, Phân vùng tương đương, Bảng quyết định, State Transition, v.v.) xuất ra Excel, Word, CSV.<br>- Xây dựng kịch bản kiểm thử hộp trắng (**White-box CFG Basis Path Testing**) đạt 100% Branch Coverage (`tests/whitebox_test.js`).<br>- Xây dựng bộ tự động hóa kiểm thử API bằng **Postman Collection** (42/42 assertions PASSED). | `KTWXD-2`<br>`KTWXD-6`<br>`KTWXD-8` |
 | 3 | **Nguyễn Thiên Giang** | DevOps & Deployment QA | - Đóng gói container hóa toàn bộ hệ thống bằng **Docker & Docker Compose**.<br>- Quản lý version build, tự động hóa build image và push lên **Docker Hub** (`latest`, `v1.0.0`). | `KTWXD-3`<br>`KTWXD-7` |
 | 4 | **Tuấn Trần** | Automation QA Support | - Hỗ trợ thiết lập kịch bản kiểm thử hồi quy (Regression Testing).<br>- Giám sát thực thi kiểm thử và thu thập log kết quả trong pipeline. | `KTWXD-4` |
 
@@ -117,20 +117,20 @@ Websitemuabanxedap/
 
 ## 📊 5. TỔNG HỢP KẾT QUẢ CÁC BỘ KIỂM THỬ
 
-### 5.1. Ma trận 125 Test Cases (Bao phủ 7 chương lý thuyết kiểm thử)
+### 5.1. Ma trận 125 Test Cases (Bao phủ các Kỹ thuật Kiểm thử Cốt lõi)
 Bộ test case được thiết kế và thực thi đầy đủ theo 9 phương pháp kiểm thử phần mềm:
 
-| STT | Kỹ Thuật Kiểm Thử | Chương | Số Lượng TC | Trạng Thái | File Đặc Tả |
+| STT | Kỹ Thuật Kiểm Thử | Phân Loại Kiểm Thử | Số Lượng TC | Trạng Thái | File Đặc Tả |
 |:---:|:---|:---:|:---:|:---:|:---|
-| 1 | Phân tích giá trị biên (Boundary Value Analysis - BVA) | Chương 4 | **12** | PASSED | `DanhSach_TestCases_ChiTiet_WebXeDap.xlsx` |
-| 2 | Phân vùng tương đương (Equivalence Partitioning - EP) | Chương 4 | **15** | PASSED | `DanhSach_TestCases_ChiTiet_WebXeDap.xlsx` |
-| 3 | Bảng quyết định (Decision Table Testing) | Chương 4 | **12** | PASSED | `DanhSach_TestCases_ChiTiet_WebXeDap.xlsx` |
-| 4 | Kiểm thử chuyển trạng thái (State Transition Testing) | Chương 4 | **12** | PASSED | `DanhSach_TestCases_ChiTiet_WebXeDap.xlsx` |
-| 5 | Kiểm thử Use Case (Use Case Testing) | Chương 4 | **12** | PASSED | `DanhSach_TestCases_ChiTiet_WebXeDap.xlsx` |
-| 6 | Kỹ thuật dựa trên kinh nghiệm (Error Guessing / Exploratory) | Chương 4 | **10** | PASSED | `DanhSach_TestCases_ChiTiet_WebXeDap.xlsx` |
-| 7 | Kiểm thử hộp trắng (White-box: CFG, Statement, Branch, Path) | Chương 4 | **15** | PASSED | `tests/whitebox_test.js` |
-| 8 | Kiểm thử phi chức năng: Hiệu năng & Tải (Performance Testing)| Chương 5 | **10** | PASSED | `DanhSach_TestCases_ChiTiet_WebXeDap.xlsx` |
-| 9 | Kiểm thử bảo mật (Security Testing: SQLi, XSS, JWT Brute Force)| Chương 5 | **10** | PASSED | `BoTest_ToanDien_WebXeDap.postman_collection.json` |
+| 1 | Phân tích giá trị biên (Boundary Value Analysis - BVA) | Kiểm thử Chức năng (Black-box) | **12** | PASSED | `DanhSach_TestCases_ChiTiet_WebXeDap.xlsx` |
+| 2 | Phân vùng tương đương (Equivalence Partitioning - EP) | Kiểm thử Chức năng (Black-box) | **15** | PASSED | `DanhSach_TestCases_ChiTiet_WebXeDap.xlsx` |
+| 3 | Bảng quyết định (Decision Table Testing) | Kiểm thử Chức năng (Black-box) | **12** | PASSED | `DanhSach_TestCases_ChiTiet_WebXeDap.xlsx` |
+| 4 | Kiểm thử chuyển trạng thái (State Transition Testing) | Kiểm thử Chức năng (Black-box) | **12** | PASSED | `DanhSach_TestCases_ChiTiet_WebXeDap.xlsx` |
+| 5 | Kiểm thử Use Case (Use Case Testing) | Kiểm thử Chức năng (Black-box) | **12** | PASSED | `DanhSach_TestCases_ChiTiet_WebXeDap.xlsx` |
+| 6 | Kỹ thuật dựa trên kinh nghiệm (Error Guessing / Exploratory) | Kiểm thử Chức năng (Black-box) | **10** | PASSED | `DanhSach_TestCases_ChiTiet_WebXeDap.xlsx` |
+| 7 | Kiểm thử hộp trắng (White-box: CFG, Statement, Branch, Path) | Kiểm thử Chức năng (Black-box) | **15** | PASSED | `tests/whitebox_test.js` |
+| 8 | Kiểm thử phi chức năng: Hiệu năng & Tải (Performance Testing)| Kiểm thử Phi chức năng & Bảo mật | **10** | PASSED | `DanhSach_TestCases_ChiTiet_WebXeDap.xlsx` |
+| 9 | Kiểm thử bảo mật (Security Testing: SQLi, XSS, JWT Brute Force)| Kiểm thử Phi chức năng & Bảo mật | **10** | PASSED | `BoTest_ToanDien_WebXeDap.postman_collection.json` |
 | **Tổng cộng** | **Toàn bộ 9 kỹ thuật kiểm thử cốt lõi** | **Toàn diện** | **125 TC** | **100% ĐẠT** | **Đầy đủ định dạng Excel, Word, MD, CSV** |
 
 ---

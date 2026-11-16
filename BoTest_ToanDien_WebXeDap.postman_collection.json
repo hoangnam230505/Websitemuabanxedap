@@ -2,7 +2,7 @@
   "info": {
     "_postman_id": "8b6d2e5b-633a-4bc1-8ba4-891805efb1f2",
     "name": "Kiểm Thử Toàn Diện Web Mua Bán Xe Đạp - UTH",
-    "description": "Bộ kịch bản kiểm thử API tự động toàn diện bao phủ 4 phân hệ: Auth, Catalog/Search, Bike Posts, Orders/Payments theo chuẩn 7 chương môn Kiểm thử phần mềm UTH.",
+    "description": "Bộ kịch bản kiểm thử API tự động toàn diện bao phủ 4 phân hệ: Auth, Catalog/Search, Bike Posts, Orders/Payments theo các kỹ thuật kiểm thử tự động API và an toàn bảo mật.",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "variable": [

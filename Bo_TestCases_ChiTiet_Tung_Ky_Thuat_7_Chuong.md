@@ -1,4 +1,4 @@
-# BỘ TÀI LIỆU 115 TEST CASES CHI TIẾT TOÀN DIỆN 7 CHƯƠNG KIỂM THỬ PHẦN MỀM
+# BỘ TÀI LIỆU 125 TEST CASES CHI TIẾT TOÀN DIỆN KIỂM THỬ PHẦN MỀM
 
 > **Môn học:** Kiểm thử phần mềm – Trường ĐH Giao thông Vận tải TP.HCM (UTH)
 > **Dự án:** Website Mua Bán Xe Đạp (`Websitemuabanxedap-main`)
@@ -7,11 +7,11 @@
 
 ---
 
-## KỸ THUẬT: PHÂN TÍCH GIÁ TRỊ BIÊN (BVA) (Chương 4)
+## KỸ THUẬT: PHÂN TÍCH GIÁ TRỊ BIÊN (BVA) 
 
 ### TC-BVA-01: Kiểm thử biên dưới độ dài mật khẩu tại min-1 (5 ký tự)
 - **Phân hệ (Module):** `Xác thực & Xe đạp`
-- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Người dùng ở trang đăng ký
@@ -30,7 +30,7 @@
 
 ### TC-BVA-02: Kiểm thử biên dưới độ dài mật khẩu tại min (6 ký tự)
 - **Phân hệ (Module):** `Xác thực & Xe đạp`
-- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Người dùng ở trang đăng ký
@@ -49,7 +49,7 @@
 
 ### TC-BVA-03: Kiểm thử biên dưới độ dài mật khẩu tại min+1 (7 ký tự)
 - **Phân hệ (Module):** `Xác thực & Xe đạp`
-- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Người dùng ở trang đăng ký
@@ -67,7 +67,7 @@
 
 ### TC-BVA-04: Kiểm thử giá trị danh nghĩa độ dài mật khẩu (nominal = 10 ký tự)
 - **Phân hệ (Module):** `Xác thực & Xe đạp`
-- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Người dùng ở trang đăng ký
@@ -85,7 +85,7 @@
 
 ### TC-BVA-05: Kiểm thử độ dài mật khẩu rỗng (length = 0 ký tự)
 - **Phân hệ (Module):** `Xác thực & Xe đạp`
-- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Người dùng ở trang đăng ký
@@ -103,7 +103,7 @@
 
 ### TC-BVA-06: Kiểm thử biên dưới giá bán xe tại min-1 (Giá = 0 VNĐ)
 - **Phân hệ (Module):** `Xác thực & Xe đạp`
-- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Đã đăng nhập người bán
@@ -122,7 +122,7 @@
 
 ### TC-BVA-07: Kiểm thử biên dưới giá bán xe số âm (Giá = -50.000 VNĐ)
 - **Phân hệ (Module):** `Xác thực & Xe đạp`
-- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Đã đăng nhập
@@ -140,7 +140,7 @@
 
 ### TC-BVA-08: Kiểm thử biên dưới giá bán xe tối thiểu hợp lệ (min = 1.000 VNĐ)
 - **Phân hệ (Module):** `Xác thực & Xe đạp`
-- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Đã đăng nhập
@@ -158,7 +158,7 @@
 
 ### TC-BVA-09: Kiểm thử giá bán xe danh nghĩa hợp lệ (nominal = 5.000.000 VNĐ)
 - **Phân hệ (Module):** `Xác thực & Xe đạp`
-- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Đã đăng nhập
@@ -176,7 +176,7 @@
 
 ### TC-BVA-10: Kiểm thử biên trên giá bán xe cao cấp (max = 500.000.000 VNĐ)
 - **Phân hệ (Module):** `Xác thực & Xe đạp`
-- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Đã đăng nhập
@@ -194,7 +194,7 @@
 
 ### TC-BVA-11: Kiểm thử biên dưới độ dài tiêu đề bài đăng tại min-1 (9 ký tự)
 - **Phân hệ (Module):** `Xác thực & Xe đạp`
-- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Đã đăng nhập
@@ -212,7 +212,7 @@
 
 ### TC-BVA-12: Kiểm thử biên dưới độ dài tiêu đề bài đăng tại min (10 ký tự)
 - **Phân hệ (Module):** `Xác thực & Xe đạp`
-- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Đã đăng nhập
@@ -230,7 +230,7 @@
 
 ### TC-BVA-13: Kiểm thử biên trên độ dài tiêu đề bài đăng tại max (100 ký tự)
 - **Phân hệ (Module):** `Xác thực & Xe đạp`
-- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Đã đăng nhập
@@ -248,7 +248,7 @@
 
 ### TC-BVA-14: Kiểm thử biên trên độ dài tiêu đề bài đăng tại max+1 (101 ký tự)
 - **Phân hệ (Module):** `Xác thực & Xe đạp`
-- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Đã đăng nhập
@@ -266,7 +266,7 @@
 
 ### TC-BVA-15: Kiểm thử biên dưới số lượng phân trang tại page=1 (min page)
 - **Phân hệ (Module):** `Xác thực & Xe đạp`
-- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Hệ thống có dữ liệu
@@ -284,7 +284,7 @@
 
 ### TC-BVA-16: Kiểm thử số trang âm không hợp lệ (page = 0 hoặc page = -1)
 - **Phân hệ (Module):** `Xác thực & Xe đạp`
-- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Hệ thống có dữ liệu
@@ -302,7 +302,7 @@
 
 ### TC-BVA-17: Kiểm thử biên trên giới hạn số bản ghi mỗi trang (limit=50 và limit=51)
 - **Phân hệ (Module):** `Xác thực & Xe đạp`
-- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Hệ thống có dữ liệu
@@ -320,7 +320,7 @@
 
 ### TC-BVA-18: Kiểm thử biên dung lượng file ảnh upload (max = 5MB và max+1 = 5.2MB)
 - **Phân hệ (Module):** `Xác thực & Xe đạp`
-- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Đã có bài đăng
@@ -335,11 +335,11 @@
 
 ---
 
-## KỸ THUẬT: KIỂM THỬ TĨNH (STATIC TESTING) (Chương 3)
+## KỸ THUẬT: KIỂM THỬ TĨNH (STATIC TESTING) 
 
 ### TC-STAT-01: Rà soát quy chuẩn camelCase tên file Controller trên Linux Docker
 - **Phân hệ (Module):** `Chất lượng mã & Cấu hình`
-- **Kỹ thuật áp dụng:** `Kiểm thử Tĩnh (Static Testing)` (Chương 3)
+- **Kỹ thuật áp dụng:** `Kiểm thử Tĩnh (Static Testing)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Mã nguồn Git
@@ -357,7 +357,7 @@
 
 ### TC-STAT-02: Rà soát quy chuẩn camelCase tên file Routes trên Linux Docker
 - **Phân hệ (Module):** `Chất lượng mã & Cấu hình`
-- **Kỹ thuật áp dụng:** `Kiểm thử Tĩnh (Static Testing)` (Chương 3)
+- **Kỹ thuật áp dụng:** `Kiểm thử Tĩnh (Static Testing)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Mã nguồn Git
@@ -375,7 +375,7 @@
 
 ### TC-STAT-03: Quét phân tích tĩnh tự động Qodana phát hiện biến chưa dùng (Unused vars)
 - **Phân hệ (Module):** `Chất lượng mã & Cấu hình`
-- **Kỹ thuật áp dụng:** `Kiểm thử Tĩnh (Static Testing)` (Chương 3)
+- **Kỹ thuật áp dụng:** `Kiểm thử Tĩnh (Static Testing)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Repo Git
@@ -394,7 +394,7 @@
 
 ### TC-STAT-04: Quét Qodana phát hiện các module require không sử dụng
 - **Phân hệ (Module):** `Chất lượng mã & Cấu hình`
-- **Kỹ thuật áp dụng:** `Kiểm thử Tĩnh (Static Testing)` (Chương 3)
+- **Kỹ thuật áp dụng:** `Kiểm thử Tĩnh (Static Testing)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Repo Git
@@ -412,7 +412,7 @@
 
 ### TC-STAT-05: Rà soát bảo mật không lưu mật khẩu cứng trong mã nguồn (No Hardcoded Secrets)
 - **Phân hệ (Module):** `Chất lượng mã & Cấu hình`
-- **Kỹ thuật áp dụng:** `Kiểm thử Tĩnh (Static Testing)` (Chương 3)
+- **Kỹ thuật áp dụng:** `Kiểm thử Tĩnh (Static Testing)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Mã nguồn
@@ -430,7 +430,7 @@
 
 ### TC-STAT-06: Rà soát mẫu giải phóng kết nối CSDL chống cạn kiệt Connection Pool
 - **Phân hệ (Module):** `Chất lượng mã & Cấu hình`
-- **Kỹ thuật áp dụng:** `Kiểm thử Tĩnh (Static Testing)` (Chương 3)
+- **Kỹ thuật áp dụng:** `Kiểm thử Tĩnh (Static Testing)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Controller
@@ -448,7 +448,7 @@
 
 ### TC-STAT-07: Rà soát xử lý lỗi ngoại lệ khối try-catch trong tất cả Controller API
 - **Phân hệ (Module):** `Chất lượng mã & Cấu hình`
-- **Kỹ thuật áp dụng:** `Kiểm thử Tĩnh (Static Testing)` (Chương 3)
+- **Kỹ thuật áp dụng:** `Kiểm thử Tĩnh (Static Testing)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Controller
@@ -466,7 +466,7 @@
 
 ### TC-STAT-08: Rà soát tiêu chuẩn thiết kế RESTful API cho các động từ HTTP
 - **Phân hệ (Module):** `Chất lượng mã & Cấu hình`
-- **Kỹ thuật áp dụng:** `Kiểm thử Tĩnh (Static Testing)` (Chương 3)
+- **Kỹ thuật áp dụng:** `Kiểm thử Tĩnh (Static Testing)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Route
@@ -484,7 +484,7 @@
 
 ### TC-STAT-09: Rà soát tính nhất quán của cấu trúc Response JSON trả về Client
 - **Phân hệ (Module):** `Chất lượng mã & Cấu hình`
-- **Kỹ thuật áp dụng:** `Kiểm thử Tĩnh (Static Testing)` (Chương 3)
+- **Kỹ thuật áp dụng:** `Kiểm thử Tĩnh (Static Testing)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Server
@@ -502,7 +502,7 @@
 
 ### TC-STAT-10: Rà soát phân quyền Route Guard với Middleware xác thực (authMiddleware)
 - **Phân hệ (Module):** `Chất lượng mã & Cấu hình`
-- **Kỹ thuật áp dụng:** `Kiểm thử Tĩnh (Static Testing)` (Chương 3)
+- **Kỹ thuật áp dụng:** `Kiểm thử Tĩnh (Static Testing)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Route
@@ -519,7 +519,7 @@
 
 ### TC-STAT-11: Rà soát cấu hình thư mục tĩnh phục vụ file upload ảnh (/uploads)
 - **Phân hệ (Module):** `Chất lượng mã & Cấu hình`
-- **Kỹ thuật áp dụng:** `Kiểm thử Tĩnh (Static Testing)` (Chương 3)
+- **Kỹ thuật áp dụng:** `Kiểm thử Tĩnh (Static Testing)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > server.js
@@ -537,7 +537,7 @@
 
 ### TC-STAT-12: Rà soát chuẩn hóa mã hóa ký tự UTF-8 cho CSDL MySQL (utf8mb4)
 - **Phân hệ (Module):** `Chất lượng mã & Cấu hình`
-- **Kỹ thuật áp dụng:** `Kiểm thử Tĩnh (Static Testing)` (Chương 3)
+- **Kỹ thuật áp dụng:** `Kiểm thử Tĩnh (Static Testing)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > db.js
@@ -555,7 +555,7 @@
 
 ### TC-STAT-13: Rà soát quy định kích thước upload file tối đa trong Multer Middleware
 - **Phân hệ (Module):** `Chất lượng mã & Cấu hình`
-- **Kỹ thuật áp dụng:** `Kiểm thử Tĩnh (Static Testing)` (Chương 3)
+- **Kỹ thuật áp dụng:** `Kiểm thử Tĩnh (Static Testing)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Upload config
@@ -573,7 +573,7 @@
 
 ### TC-STAT-14: Rà soát cấu hình Dockerfile Node.js theo chuẩn kích thước nhẹ (node:18-alpine)
 - **Phân hệ (Module):** `Chất lượng mã & Cấu hình`
-- **Kỹ thuật áp dụng:** `Kiểm thử Tĩnh (Static Testing)` (Chương 3)
+- **Kỹ thuật áp dụng:** `Kiểm thử Tĩnh (Static Testing)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Dockerfile
@@ -591,7 +591,7 @@
 
 ### TC-STAT-15: Rà soát cú pháp biến môi trường trong GitHub Actions Workflow (.github/workflows/ci.yml)
 - **Phân hệ (Module):** `Chất lượng mã & Cấu hình`
-- **Kỹ thuật áp dụng:** `Kiểm thử Tĩnh (Static Testing)` (Chương 3)
+- **Kỹ thuật áp dụng:** `Kiểm thử Tĩnh (Static Testing)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > CI/CD config
@@ -872,11 +872,11 @@
 
 ---
 
-## KỸ THUẬT: PHÂN HOẠCH TƯƠNG ĐƯƠNG (EP) (Chương 4)
+## KỸ THUẬT: PHÂN HOẠCH TƯƠNG ĐƯƠNG (EP) 
 
 ### TC-EP-01: Đăng ký với lớp định dạng email không hợp lệ (thiếu ký tự @)
 - **Phân hệ (Module):** `Xác thực & Danh mục`
-- **Kỹ thuật áp dụng:** `Phân hoạch tương đương (EP)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Phân hoạch tương đương (EP)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Trang register
@@ -894,7 +894,7 @@
 
 ### TC-EP-02: Đăng ký với lớp định dạng email hợp lệ (có @ và tên miền đầy đủ)
 - **Phân hệ (Module):** `Xác thực & Danh mục`
-- **Kỹ thuật áp dụng:** `Phân hoạch tương đương (EP)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Phân hoạch tương đương (EP)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Trang register
@@ -912,7 +912,7 @@
 
 ### TC-EP-03: Upload file thuộc lớp định dạng ảnh hợp lệ (image/jpeg, image/png)
 - **Phân hệ (Module):** `Xác thực & Danh mục`
-- **Kỹ thuật áp dụng:** `Phân hoạch tương đương (EP)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Phân hoạch tương đương (EP)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Đã có bài đăng
@@ -930,7 +930,7 @@
 
 ### TC-EP-04: Upload file thuộc lớp định dạng không phải ảnh (.pdf, .docx, .exe)
 - **Phân hệ (Module):** `Xác thực & Danh mục`
-- **Kỹ thuật áp dụng:** `Phân hoạch tương đương (EP)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Phân hoạch tương đương (EP)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Đã có bài đăng
@@ -948,7 +948,7 @@
 
 ### TC-EP-05: Lọc bài đăng theo lớp trạng thái hợp lệ ('AVAILABLE')
 - **Phân hệ (Module):** `Xác thực & Danh mục`
-- **Kỹ thuật áp dụng:** `Phân hoạch tương đương (EP)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Phân hoạch tương đương (EP)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Trang tìm kiếm
@@ -965,7 +965,7 @@
 
 ### TC-EP-06: Lọc bài đăng theo lớp trạng thái hợp lệ ('SOLD')
 - **Phân hệ (Module):** `Xác thực & Danh mục`
-- **Kỹ thuật áp dụng:** `Phân hoạch tương đương (EP)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Phân hoạch tương đương (EP)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Trang tìm kiếm
@@ -982,7 +982,7 @@
 
 ### TC-EP-07: Lọc theo lớp trạng thái không hợp lệ ('DELETED_UNKNOWN')
 - **Phân hệ (Module):** `Xác thực & Danh mục`
-- **Kỹ thuật áp dụng:** `Phân hoạch tương đương (EP)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Phân hoạch tương đương (EP)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Trang tìm kiếm
@@ -999,7 +999,7 @@
 
 ### TC-EP-08: Lọc theo Category ID thuộc lớp tồn tại trong hệ thống (ID = 1)
 - **Phân hệ (Module):** `Xác thực & Danh mục`
-- **Kỹ thuật áp dụng:** `Phân hoạch tương đương (EP)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Phân hoạch tương đương (EP)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Trang tìm kiếm
@@ -1016,7 +1016,7 @@
 
 ### TC-EP-09: Lọc theo Category ID thuộc lớp không tồn tại (ID = 99999)
 - **Phân hệ (Module):** `Xác thực & Danh mục`
-- **Kỹ thuật áp dụng:** `Phân hoạch tương đương (EP)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Phân hoạch tương đương (EP)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Trang tìm kiếm
@@ -1033,7 +1033,7 @@
 
 ### TC-EP-10: Đặt hàng với phương thức thanh toán không được hỗ trợ ('MOMO_PAY')
 - **Phân hệ (Module):** `Xác thực & Danh mục`
-- **Kỹ thuật áp dụng:** `Phân hoạch tương đương (EP)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Phân hoạch tương đương (EP)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Trang checkout
@@ -1048,11 +1048,11 @@
 
 ---
 
-## KỸ THUẬT: BẢNG QUYẾT ĐỊNH (DECISION TABLE) (Chương 4)
+## KỸ THUẬT: BẢNG QUYẾT ĐỊNH (DECISION TABLE) 
 
 ### TC-DT-01: Quy tắc R1: Thỏa mãn tất cả điều kiện -> Đặt hàng thành công phương thức COD
 - **Phân hệ (Module):** `Đơn hàng & Thanh toán`
-- **Kỹ thuật áp dụng:** `Bảng quyết định (Decision Table)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Bảng quyết định (Decision Table)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Đã login, xe AVAILABLE, buyer!=seller, method=COD
@@ -1071,7 +1071,7 @@
 
 ### TC-DT-02: Quy tắc R2: Thỏa mãn tất cả điều kiện -> Đặt hàng thành công chuyển khoản BANK_TRANSFER
 - **Phân hệ (Module):** `Đơn hàng & Thanh toán`
-- **Kỹ thuật áp dụng:** `Bảng quyết định (Decision Table)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Bảng quyết định (Decision Table)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Đã login, xe AVAILABLE, buyer!=seller, method=BANK_TRANSFER
@@ -1089,7 +1089,7 @@
 
 ### TC-DT-03: Quy tắc R3: Chưa xác thực (C1=False) -> Từ chối tạo đơn hàng
 - **Phân hệ (Module):** `Đơn hàng & Thanh toán`
-- **Kỹ thuật áp dụng:** `Bảng quyết định (Decision Table)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Bảng quyết định (Decision Table)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Chưa có token
@@ -1106,7 +1106,7 @@
 
 ### TC-DT-04: Quy tắc R4: Xe không còn khả dụng (C2=False) do đã có người đặt trước
 - **Phân hệ (Module):** `Đơn hàng & Thanh toán`
-- **Kỹ thuật áp dụng:** `Bảng quyết định (Decision Table)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Bảng quyết định (Decision Table)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Xe status='PENDING'
@@ -1123,7 +1123,7 @@
 
 ### TC-DT-05: Quy tắc R5: Xe đã bán hoàn tất (C2=False, status='SOLD')
 - **Phân hệ (Module):** `Đơn hàng & Thanh toán`
-- **Kỹ thuật áp dụng:** `Bảng quyết định (Decision Table)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Bảng quyết định (Decision Table)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Xe status='SOLD'
@@ -1140,7 +1140,7 @@
 
 ### TC-DT-06: Quy tắc R6: Người bán tự mua xe của chính mình (C3=False)
 - **Phân hệ (Module):** `Đơn hàng & Thanh toán`
-- **Kỹ thuật áp dụng:** `Bảng quyết định (Decision Table)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Bảng quyết định (Decision Table)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > buyer_id == seller_id
@@ -1157,7 +1157,7 @@
 
 ### TC-DT-07: Quy tắc R7: Phương thức thanh toán không hợp lệ (C4=False)
 - **Phân hệ (Module):** `Đơn hàng & Thanh toán`
-- **Kỹ thuật áp dụng:** `Bảng quyết định (Decision Table)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Bảng quyết định (Decision Table)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Method không hỗ trợ
@@ -1174,7 +1174,7 @@
 
 ### TC-DT-08: Quy tắc R8: Thiếu địa chỉ nhận hàng (Thiếu input bắt buộc)
 - **Phân hệ (Module):** `Đơn hàng & Thanh toán`
-- **Kỹ thuật áp dụng:** `Bảng quyết định (Decision Table)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Bảng quyết định (Decision Table)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Không điền địa chỉ
@@ -1192,7 +1192,7 @@
 
 ### TC-DT-09: Quy tắc R9: Hủy đơn hợp lệ (Người mua là chủ đơn, trạng thái đơn PENDING)
 - **Phân hệ (Module):** `Đơn hàng & Thanh toán`
-- **Kỹ thuật áp dụng:** `Bảng quyết định (Decision Table)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Bảng quyết định (Decision Table)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Đơn của mình, PENDING
@@ -1209,7 +1209,7 @@
 
 ### TC-DT-10: Quy tắc R10: Từ chối hủy đơn khi đơn đã được giao thành công (Status != PENDING)
 - **Phân hệ (Module):** `Đơn hàng & Thanh toán`
-- **Kỹ thuật áp dụng:** `Bảng quyết định (Decision Table)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Bảng quyết định (Decision Table)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Đơn COMPLETED
@@ -1224,11 +1224,11 @@
 
 ---
 
-## KỸ THUẬT: CHUYỂN TRẠNG THÁI (STATE TRANSITION) (Chương 4)
+## KỸ THUẬT: CHUYỂN TRẠNG THÁI (STATE TRANSITION) 
 
 ### TC-ST-01: Chuyển trạng thái bài đăng xe: AVAILABLE -> PENDING khi có đơn hàng mới
 - **Phân hệ (Module):** `Vòng đời đối tượng`
-- **Kỹ thuật áp dụng:** `Chuyển trạng thái (State Transition)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Chuyển trạng thái (State Transition)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Xe AVAILABLE
@@ -1246,7 +1246,7 @@
 
 ### TC-ST-02: Chuyển trạng thái giao dịch thanh toán: PENDING -> SUCCESS khi xác nhận thanh toán
 - **Phân hệ (Module):** `Vòng đời đối tượng`
-- **Kỹ thuật áp dụng:** `Chuyển trạng thái (State Transition)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Chuyển trạng thái (State Transition)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Payment PENDING
@@ -1264,7 +1264,7 @@
 
 ### TC-ST-03: Chuyển trạng thái khi HỦY ĐƠN: Đơn sang CANCELLED và xe hoàn về AVAILABLE
 - **Phân hệ (Module):** `Vòng đời đối tượng`
-- **Kỹ thuật áp dụng:** `Chuyển trạng thái (State Transition)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Chuyển trạng thái (State Transition)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Đơn PENDING, xe PENDING
@@ -1282,7 +1282,7 @@
 
 ### TC-ST-04: Chuyển trạng thái đơn hàng: CONFIRMED -> SHIPPED khi người bán gửi hàng
 - **Phân hệ (Module):** `Vòng đời đối tượng`
-- **Kỹ thuật áp dụng:** `Chuyển trạng thái (State Transition)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Chuyển trạng thái (State Transition)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Đơn CONFIRMED
@@ -1299,7 +1299,7 @@
 
 ### TC-ST-05: Chuyển trạng thái đơn hàng: SHIPPED -> COMPLETED khi giao hàng thành công
 - **Phân hệ (Module):** `Vòng đời đối tượng`
-- **Kỹ thuật áp dụng:** `Chuyển trạng thái (State Transition)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Chuyển trạng thái (State Transition)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Đơn SHIPPED
@@ -1316,7 +1316,7 @@
 
 ### TC-ST-06: Chuyển trạng thái bài đăng xe: PENDING -> SOLD khi giao dịch hoàn tất
 - **Phân hệ (Module):** `Vòng đời đối tượng`
-- **Kỹ thuật áp dụng:** `Chuyển trạng thái (State Transition)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Chuyển trạng thái (State Transition)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Xe PENDING
@@ -1333,7 +1333,7 @@
 
 ### TC-ST-07: Chặn chuyển trạng thái cấm: Không cho phép chuyển trực tiếp từ CANCELLED sang COMPLETED
 - **Phân hệ (Module):** `Vòng đời đối tượng`
-- **Kỹ thuật áp dụng:** `Chuyển trạng thái (State Transition)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Chuyển trạng thái (State Transition)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Đơn CANCELLED
@@ -1350,7 +1350,7 @@
 
 ### TC-ST-08: Chặn chuyển trạng thái cấm: Không cho phép chuyển từ SOLD ngược về PENDING
 - **Phân hệ (Module):** `Vòng đời đối tượng`
-- **Kỹ thuật áp dụng:** `Chuyển trạng thái (State Transition)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Chuyển trạng thái (State Transition)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Xe SOLD
@@ -1367,7 +1367,7 @@
 
 ### TC-ST-09: Chuyển trạng thái bài đăng xe: AVAILABLE -> HIDDEN khi người bán tạm ẩn tin
 - **Phân hệ (Module):** `Vòng đời đối tượng`
-- **Kỹ thuật áp dụng:** `Chuyển trạng thái (State Transition)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Chuyển trạng thái (State Transition)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Xe AVAILABLE
@@ -1384,7 +1384,7 @@
 
 ### TC-ST-10: Chuyển trạng thái bài đăng xe: HIDDEN -> AVAILABLE khi người bán mở lại tin
 - **Phân hệ (Module):** `Vòng đời đối tượng`
-- **Kỹ thuật áp dụng:** `Chuyển trạng thái (State Transition)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Chuyển trạng thái (State Transition)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Xe HIDDEN
@@ -1399,11 +1399,11 @@
 
 ---
 
-## KỸ THUẬT: KIỂM THỬ TRƯỜNG HỢP SỬ DỤNG (USE CASE) (Chương 4)
+## KỸ THUẬT: KIỂM THỬ TRƯỜNG HỢP SỬ DỤNG (USE CASE) 
 
 ### TC-UC-01: Use Case UC01: Luồng chính (Happy Path) - Đăng tin bán xe hoàn chỉnh
 - **Phân hệ (Module):** `Luồng nghiệp vụ E2E`
-- **Kỹ thuật áp dụng:** `Kiểm thử Trường hợp sử dụng (Use Case)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Kiểm thử Trường hợp sử dụng (Use Case)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Đã có tài khoản người bán
@@ -1423,7 +1423,7 @@
 
 ### TC-UC-02: Use Case UC01: Luồng rẽ nhánh - Bỏ trống trường bắt buộc khi đăng tin
 - **Phân hệ (Module):** `Luồng nghiệp vụ E2E`
-- **Kỹ thuật áp dụng:** `Kiểm thử Trường hợp sử dụng (Use Case)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Kiểm thử Trường hợp sử dụng (Use Case)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Đang ở trang đăng tin
@@ -1441,7 +1441,7 @@
 
 ### TC-UC-03: Use Case UC02: Luồng chính - Tìm kiếm, xem chi tiết và đặt mua xe COD
 - **Phân hệ (Module):** `Luồng nghiệp vụ E2E`
-- **Kỹ thuật áp dụng:** `Kiểm thử Trường hợp sử dụng (Use Case)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Kiểm thử Trường hợp sử dụng (Use Case)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Đã có tài khoản người mua
@@ -1462,7 +1462,7 @@
 
 ### TC-UC-04: Use Case UC02: Luồng rẽ nhánh - Người mua chưa đăng nhập bấm nút Mua Ngay
 - **Phân hệ (Module):** `Luồng nghiệp vụ E2E`
-- **Kỹ thuật áp dụng:** `Kiểm thử Trường hợp sử dụng (Use Case)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Kiểm thử Trường hợp sử dụng (Use Case)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Chưa đăng nhập
@@ -1480,7 +1480,7 @@
 
 ### TC-UC-05: Use Case UC03: Luồng chính - Quản lý và cập nhật giá tin đăng của tôi
 - **Phân hệ (Module):** `Luồng nghiệp vụ E2E`
-- **Kỹ thuật áp dụng:** `Kiểm thử Trường hợp sử dụng (Use Case)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Kiểm thử Trường hợp sử dụng (Use Case)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Có bài đăng của mình
@@ -1499,7 +1499,7 @@
 
 ### TC-UC-06: Use Case UC03: Luồng rẽ nhánh - Xóa bài đăng xe không còn nhu cầu bán
 - **Phân hệ (Module):** `Luồng nghiệp vụ E2E`
-- **Kỹ thuật áp dụng:** `Kiểm thử Trường hợp sử dụng (Use Case)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Kiểm thử Trường hợp sử dụng (Use Case)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Có bài đăng
@@ -1518,7 +1518,7 @@
 
 ### TC-UC-07: Use Case UC04: Luồng chính - Tra cứu lịch sử đơn hàng và thông tin vận chuyển
 - **Phân hệ (Module):** `Luồng nghiệp vụ E2E`
-- **Kỹ thuật áp dụng:** `Kiểm thử Trường hợp sử dụng (Use Case)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Kiểm thử Trường hợp sử dụng (Use Case)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Đã có đơn hàng
@@ -1536,7 +1536,7 @@
 
 ### TC-UC-08: Use Case UC04: Luồng rẽ nhánh - Người dùng mới chưa có đơn hàng nào vào trang lịch sử
 - **Phân hệ (Module):** `Luồng nghiệp vụ E2E`
-- **Kỹ thuật áp dụng:** `Kiểm thử Trường hợp sử dụng (Use Case)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Kiểm thử Trường hợp sử dụng (Use Case)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Tài khoản mới
@@ -1553,7 +1553,7 @@
 
 ### TC-UC-09: Use Case UC05: Luồng chính - Hủy đơn hàng đang chờ và kiểm tra mở khóa xe
 - **Phân hệ (Module):** `Luồng nghiệp vụ E2E`
-- **Kỹ thuật áp dụng:** `Kiểm thử Trường hợp sử dụng (Use Case)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Kiểm thử Trường hợp sử dụng (Use Case)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Có đơn PENDING
@@ -1572,7 +1572,7 @@
 
 ### TC-UC-10: Use Case UC05: Luồng rẽ nhánh - Người khác mua lại chiếc xe vừa được hủy đơn
 - **Phân hệ (Module):** `Luồng nghiệp vụ E2E`
-- **Kỹ thuật áp dụng:** `Kiểm thử Trường hợp sử dụng (Use Case)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Kiểm thử Trường hợp sử dụng (Use Case)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Xe vừa hoàn về AVAILABLE
@@ -1588,11 +1588,11 @@
 
 ---
 
-## KỸ THUẬT: KIỂM THỬ HỘP TRẮNG (WHITE-BOX) (Chương 4)
+## KỸ THUẬT: KIỂM THỬ HỘP TRẮNG (WHITE-BOX) 
 
 ### TC-WB-01: Bao phủ nhánh 1 (Branch 1): Kiểm tra thiếu tham số đầu vào trong createOrder
 - **Phân hệ (Module):** `Cấu trúc mã nguồn`
-- **Kỹ thuật áp dụng:** `Kiểm thử Hộp trắng (White-box)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Kiểm thử Hộp trắng (White-box)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Hàm createOrder
@@ -1609,7 +1609,7 @@
 
 ### TC-WB-02: Bao phủ nhánh 2 (Branch 2): Kiểm tra phương thức thanh toán không thuộc validMethods
 - **Phân hệ (Module):** `Cấu trúc mã nguồn`
-- **Kỹ thuật áp dụng:** `Kiểm thử Hộp trắng (White-box)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Kiểm thử Hộp trắng (White-box)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Hàm createOrder
@@ -1626,7 +1626,7 @@
 
 ### TC-WB-03: Bao phủ nhánh 3 (Branch 3): Truy vấn khóa dòng FOR UPDATE phát hiện xe không tồn tại
 - **Phân hệ (Module):** `Cấu trúc mã nguồn`
-- **Kỹ thuật áp dụng:** `Kiểm thử Hộp trắng (White-box)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Kiểm thử Hộp trắng (White-box)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Hàm createOrder
@@ -1643,7 +1643,7 @@
 
 ### TC-WB-04: Bao phủ nhánh 4 (Branch 4): So sánh logic post.seller_id === buyer_id
 - **Phân hệ (Module):** `Cấu trúc mã nguồn`
-- **Kỹ thuật áp dụng:** `Kiểm thử Hộp trắng (White-box)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Kiểm thử Hộp trắng (White-box)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Hàm createOrder
@@ -1660,7 +1660,7 @@
 
 ### TC-WB-05: Bao phủ nhánh 5 (Branch 5): Phương thức thanh toán là COD -> payment_status = SUCCESS
 - **Phân hệ (Module):** `Cấu trúc mã nguồn`
-- **Kỹ thuật áp dụng:** `Kiểm thử Hộp trắng (White-box)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Kiểm thử Hộp trắng (White-box)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Hàm createOrder
@@ -1677,7 +1677,7 @@
 
 ### TC-WB-06: Bao phủ nhánh 6 (Branch 6): Phương thức thanh toán VNPAY -> payment_status = PENDING
 - **Phân hệ (Module):** `Cấu trúc mã nguồn`
-- **Kỹ thuật áp dụng:** `Kiểm thử Hộp trắng (White-box)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Kiểm thử Hộp trắng (White-box)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Hàm createOrder
@@ -1694,7 +1694,7 @@
 
 ### TC-WB-07: Bao phủ nhánh 7 (Branch 7 - Full Success): Thực thi trọn vẹn commit transaction
 - **Phân hệ (Module):** `Cấu trúc mã nguồn`
-- **Kỹ thuật áp dụng:** `Kiểm thử Hộp trắng (White-box)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Kiểm thử Hộp trắng (White-box)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Hàm createOrder
@@ -1711,7 +1711,7 @@
 
 ### TC-WB-08: Bao phủ nhánh 8 (Branch 8 - Exception/Catch): Xử lý ngoại lệ lỗi server trong khối catch
 - **Phân hệ (Module):** `Cấu trúc mã nguồn`
-- **Kỹ thuật áp dụng:** `Kiểm thử Hộp trắng (White-box)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Kiểm thử Hộp trắng (White-box)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Hàm createOrder
@@ -1728,7 +1728,7 @@
 
 ### TC-WB-09: Bao phủ nhánh 9 (Branch 9 - Finally): Luôn giải phóng kết nối conn.release()
 - **Phân hệ (Module):** `Cấu trúc mã nguồn`
-- **Kỹ thuật áp dụng:** `Kiểm thử Hộp trắng (White-box)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Kiểm thử Hộp trắng (White-box)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Hàm createOrder
@@ -1745,7 +1745,7 @@
 
 ### TC-WB-10: Bao phủ độ phức tạp chu trình McCabe V(G)=5 của hàm hủy đơn hàng cancelOrder
 - **Phân hệ (Module):** `Cấu trúc mã nguồn`
-- **Kỹ thuật áp dụng:** `Kiểm thử Hộp trắng (White-box)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Kiểm thử Hộp trắng (White-box)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Hàm cancelOrder
@@ -1942,7 +1942,7 @@
 
 ### TC-BVA-19: Kiểm thử biên số lượng ảnh upload khi đăng bán xe tại min = 1 ảnh
 - **Phân hệ (Module):** `Đăng tin & Upload ảnh`
-- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Người dùng đã đăng nhập và đang ở trang sell.php
@@ -1961,7 +1961,7 @@
 
 ### TC-BVA-20: Kiểm thử biên số lượng ảnh upload khi đăng bán xe tại max = 5 ảnh
 - **Phân hệ (Module):** `Đăng tin & Upload ảnh`
-- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Người dùng đã đăng nhập và đang ở trang sell.php
@@ -1980,7 +1980,7 @@
 
 ### TC-BVA-21: Kiểm thử biên số lượng ảnh upload vượt ngưỡng max+1 = 6 ảnh
 - **Phân hệ (Module):** `Đăng tin & Upload ảnh`
-- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Phân tích giá trị biên (BVA)` 
 - **Mức độ ưu tiên:** `Medium` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Người dùng đang ở form upload ảnh đăng tin
@@ -1998,7 +1998,7 @@
 
 ### TC-EP-11: Kiểm thử phân vùng tình trạng xe hợp lệ: Xe mới 99% nguyên bản
 - **Phân hệ (Module):** `Quản lý sản phẩm`
-- **Kỹ thuật áp dụng:** `Phân hoạch tương đương (EP)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Phân hoạch tương đương (EP)` 
 - **Mức độ ưu tiên:** `Medium` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Người bán đăng tin phân loại tình trạng xe
@@ -2017,7 +2017,7 @@
 
 ### TC-EP-12: Kiểm thử phân vùng tình trạng xe hợp lệ: Xe cũ 85% có hao mòn
 - **Phân hệ (Module):** `Quản lý sản phẩm`
-- **Kỹ thuật áp dụng:** `Phân hoạch tương đương (EP)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Phân hoạch tương đương (EP)` 
 - **Mức độ ưu tiên:** `Medium` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Người bán đăng tin phân loại tình trạng xe
@@ -2036,7 +2036,7 @@
 
 ### TC-EP-13: Kiểm thử phân vùng tình trạng xe không hợp lệ: Giá trị ngoài phạm vi
 - **Phân hệ (Module):** `Bảo mật & Kiểm duyệt`
-- **Kỹ thuật áp dụng:** `Phân hoạch tương đương (EP)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Phân hoạch tương đương (EP)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Người bán cố tình gửi dữ liệu condition lạ qua API
@@ -2053,7 +2053,7 @@
 
 ### TC-DT-11: Quyền Người bán chỉnh sửa bài đăng khi trạng thái đang là AVAILABLE
 - **Phân hệ (Module):** `Phân quyền & Đăng tin`
-- **Kỹ thuật áp dụng:** `Bảng quyết định (Decision Table)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Bảng quyết định (Decision Table)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > User đăng nhập là chính chủ sở hữu bài đăng xe (seller_id khớp)
@@ -2073,7 +2073,7 @@
 
 ### TC-DT-12: Quyền Người mua hủy đơn hàng khi trạng thái đơn vẫn đang là PENDING
 - **Phân hệ (Module):** `Đơn hàng & Khiếu nại`
-- **Kỹ thuật áp dụng:** `Bảng quyết định (Decision Table)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Bảng quyết định (Decision Table)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Đơn hàng chưa được người bán xác nhận (status == 'PENDING')
@@ -2092,7 +2092,7 @@
 
 ### TC-DT-13: Từ chối quyền hủy đơn khi đơn hàng đã chuyển sang trạng thái SHIPPED
 - **Phân hệ (Module):** `Bảo mật & Phân quyền`
-- **Kỹ thuật áp dụng:** `Bảng quyết định (Decision Table)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Bảng quyết định (Decision Table)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Đơn hàng đang trong quá trình vận chuyển (status == 'SHIPPED')
@@ -2109,7 +2109,7 @@
 
 ### TC-ST-11: Chuyển trạng thái đơn hàng: PENDING -> CONFIRMED khi Người bán xác nhận
 - **Phân hệ (Module):** `Vòng đời đơn hàng`
-- **Kỹ thuật áp dụng:** `Chuyển trạng thái (State Transition)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Chuyển trạng thái (State Transition)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Đơn hàng mới tạo đang ở trạng thái PENDING
@@ -2127,7 +2127,7 @@
 
 ### TC-ST-12: Chuyển trạng thái đơn hàng: CONFIRMED -> SHIPPED khi giao cho shipper
 - **Phân hệ (Module):** `Vòng đời đơn hàng`
-- **Kỹ thuật áp dụng:** `Chuyển trạng thái (State Transition)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Chuyển trạng thái (State Transition)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Đơn hàng đang ở trạng thái CONFIRMED
@@ -2145,7 +2145,7 @@
 
 ### TC-ST-13: Chuyển trạng thái đơn hàng: SHIPPED -> COMPLETED khi Người mua nhận xe
 - **Phân hệ (Module):** `Vòng đời đơn hàng`
-- **Kỹ thuật áp dụng:** `Chuyển trạng thái (State Transition)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Chuyển trạng thái (State Transition)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Đơn hàng đang ở trạng thái SHIPPED
@@ -2163,7 +2163,7 @@
 
 ### TC-WB-11: Kiểm thử nhánh rẽ M2-P4: Hủy đơn hàng và khôi phục trạng thái xe về AVAILABLE
 - **Phân hệ (Module):** `Xử lý Controller`
-- **Kỹ thuật áp dụng:** `Kiểm thử Hộp trắng (White-box)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Kiểm thử Hộp trắng (White-box)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Hàm updateOrderStatus nhận status = 'CANCELLED'
@@ -2180,7 +2180,7 @@
 
 ### TC-WB-12: Kiểm thử nhánh rẽ M2-P5: Cập nhật trạng thái trung gian SHIPPED giữ nguyên xe
 - **Phân hệ (Module):** `Xử lý Controller`
-- **Kỹ thuật áp dụng:** `Kiểm thử Hộp trắng (White-box)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Kiểm thử Hộp trắng (White-box)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Hàm updateOrderStatus nhận status = 'SHIPPED'
@@ -2197,7 +2197,7 @@
 
 ### TC-UC-11: Kịch bản Tìm kiếm và Lọc xe đạp theo thương hiệu Giant và tầm giá < 10 triệu
 - **Phân hệ (Module):** `Luồng nghiệp vụ`
-- **Kỹ thuật áp dụng:** `Kiểm thử Trường hợp sử dụng (Use Case)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Kiểm thử Trường hợp sử dụng (Use Case)` 
 - **Mức độ ưu tiên:** `Medium` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Người dùng ở trang chủ index.php
@@ -2217,7 +2217,7 @@
 
 ### TC-UC-12: Kịch bản Đăng tin bán xe đạp hoàn chỉnh từ nhập thông tin đến tải ảnh
 - **Phân hệ (Module):** `Luồng nghiệp vụ`
-- **Kỹ thuật áp dụng:** `Kiểm thử Trường hợp sử dụng (Use Case)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Kiểm thử Trường hợp sử dụng (Use Case)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Người dùng đã đăng nhập tài khoản
@@ -2237,7 +2237,7 @@
 
 ### TC-UC-13: Kịch bản Cập nhật thông tin hồ sơ cá nhân và đổi mật khẩu tài khoản
 - **Phân hệ (Module):** `Luồng nghiệp vụ`
-- **Kỹ thuật áp dụng:** `Kiểm thử Trường hợp sử dụng (Use Case)` (Chương 4)
+- **Kỹ thuật áp dụng:** `Kiểm thử Trường hợp sử dụng (Use Case)` 
 - **Mức độ ưu tiên:** `High` | **Trạng thái:** `PASSED`
 - **Tiền điều kiện (Pre-conditions):**
   > Người dùng đã đăng nhập
@@ -2263,7 +2263,7 @@
 
 ### TC-BVA-19: Kiểm thử biên số lượng ảnh upload khi đăng bán xe tại min = 1 ảnh
 - **Phân hệ (Module):** Đăng tin & Upload ảnh
-- **Kỹ thuật áp dụng:** Phân tích giá trị biên (BVA) (Chương 4)
+- **Kỹ thuật áp dụng:** Phân tích giá trị biên (BVA) 
 - **Mức độ ưu tiên:** High | **Trạng thái:** PASSED
 - **Tiền điều kiện (Pre-conditions):**
   > Người dùng đã đăng nhập và đang ở trang sell.php
@@ -2282,7 +2282,7 @@
 
 ### TC-BVA-20: Kiểm thử biên số lượng ảnh upload khi đăng bán xe tại max = 5 ảnh
 - **Phân hệ (Module):** Đăng tin & Upload ảnh
-- **Kỹ thuật áp dụng:** Phân tích giá trị biên (BVA) (Chương 4)
+- **Kỹ thuật áp dụng:** Phân tích giá trị biên (BVA) 
 - **Mức độ ưu tiên:** High | **Trạng thái:** PASSED
 - **Tiền điều kiện (Pre-conditions):**
   > Người dùng đã đăng nhập và đang ở trang sell.php
@@ -2301,7 +2301,7 @@
 
 ### TC-BVA-21: Kiểm thử biên số lượng ảnh upload vượt ngưỡng max+1 = 6 ảnh
 - **Phân hệ (Module):** Đăng tin & Upload ảnh
-- **Kỹ thuật áp dụng:** Phân tích giá trị biên (BVA) (Chương 4)
+- **Kỹ thuật áp dụng:** Phân tích giá trị biên (BVA) 
 - **Mức độ ưu tiên:** Medium | **Trạng thái:** PASSED
 - **Tiền điều kiện (Pre-conditions):**
   > Người dùng đang ở form upload ảnh đăng tin
@@ -2319,7 +2319,7 @@
 
 ### TC-EP-11: Kiểm thử phân vùng tình trạng xe hợp lệ: Xe mới 99% nguyên bản
 - **Phân hệ (Module):** Quản lý sản phẩm
-- **Kỹ thuật áp dụng:** Phân hoạch tương đương (EP) (Chương 4)
+- **Kỹ thuật áp dụng:** Phân hoạch tương đương (EP) 
 - **Mức độ ưu tiên:** Medium | **Trạng thái:** PASSED
 - **Tiền điều kiện (Pre-conditions):**
   > Người bán đăng tin phân loại tình trạng xe
@@ -2338,7 +2338,7 @@
 
 ### TC-EP-12: Kiểm thử phân vùng tình trạng xe hợp lệ: Xe cũ 85% có hao mòn
 - **Phân hệ (Module):** Quản lý sản phẩm
-- **Kỹ thuật áp dụng:** Phân hoạch tương đương (EP) (Chương 4)
+- **Kỹ thuật áp dụng:** Phân hoạch tương đương (EP) 
 - **Mức độ ưu tiên:** Medium | **Trạng thái:** PASSED
 - **Tiền điều kiện (Pre-conditions):**
   > Người bán đăng tin phân loại tình trạng xe
@@ -2357,7 +2357,7 @@
 
 ### TC-EP-13: Kiểm thử phân vùng tình trạng xe không hợp lệ: Giá trị ngoài phạm vi
 - **Phân hệ (Module):** Bảo mật & Kiểm duyệt
-- **Kỹ thuật áp dụng:** Phân hoạch tương đương (EP) (Chương 4)
+- **Kỹ thuật áp dụng:** Phân hoạch tương đương (EP) 
 - **Mức độ ưu tiên:** High | **Trạng thái:** PASSED
 - **Tiền điều kiện (Pre-conditions):**
   > Người bán cố tình gửi dữ liệu condition lạ qua API
@@ -2374,7 +2374,7 @@
 
 ### TC-DT-11: Quyền Người bán chỉnh sửa bài đăng khi trạng thái đang là AVAILABLE
 - **Phân hệ (Module):** Phân quyền & Đăng tin
-- **Kỹ thuật áp dụng:** Bảng quyết định (Decision Table) (Chương 4)
+- **Kỹ thuật áp dụng:** Bảng quyết định (Decision Table) 
 - **Mức độ ưu tiên:** High | **Trạng thái:** PASSED
 - **Tiền điều kiện (Pre-conditions):**
   > User đăng nhập là chính chủ sở hữu bài đăng xe (seller_id khớp)
@@ -2394,7 +2394,7 @@
 
 ### TC-DT-12: Quyền Người mua hủy đơn hàng khi trạng thái đơn vẫn đang là PENDING
 - **Phân hệ (Module):** Đơn hàng & Khiếu nại
-- **Kỹ thuật áp dụng:** Bảng quyết định (Decision Table) (Chương 4)
+- **Kỹ thuật áp dụng:** Bảng quyết định (Decision Table) 
 - **Mức độ ưu tiên:** High | **Trạng thái:** PASSED
 - **Tiền điều kiện (Pre-conditions):**
   > Đơn hàng chưa được người bán xác nhận (status == 'PENDING')
@@ -2413,7 +2413,7 @@
 
 ### TC-DT-13: Từ chối quyền hủy đơn khi đơn hàng đã chuyển sang trạng thái SHIPPED
 - **Phân hệ (Module):** Bảo mật & Phân quyền
-- **Kỹ thuật áp dụng:** Bảng quyết định (Decision Table) (Chương 4)
+- **Kỹ thuật áp dụng:** Bảng quyết định (Decision Table) 
 - **Mức độ ưu tiên:** High | **Trạng thái:** PASSED
 - **Tiền điều kiện (Pre-conditions):**
   > Đơn hàng đang trong quá trình vận chuyển (status == 'SHIPPED')
@@ -2430,7 +2430,7 @@
 
 ### TC-ST-11: Chuyển trạng thái đơn hàng: PENDING -> CONFIRMED khi Người bán xác nhận
 - **Phân hệ (Module):** Vòng đời đơn hàng
-- **Kỹ thuật áp dụng:** Chuyển trạng thái (State Transition) (Chương 4)
+- **Kỹ thuật áp dụng:** Chuyển trạng thái (State Transition) 
 - **Mức độ ưu tiên:** High | **Trạng thái:** PASSED
 - **Tiền điều kiện (Pre-conditions):**
   > Đơn hàng mới tạo đang ở trạng thái PENDING
@@ -2448,7 +2448,7 @@
 
 ### TC-ST-12: Chuyển trạng thái đơn hàng: CONFIRMED -> SHIPPED khi giao cho shipper
 - **Phân hệ (Module):** Vòng đời đơn hàng
-- **Kỹ thuật áp dụng:** Chuyển trạng thái (State Transition) (Chương 4)
+- **Kỹ thuật áp dụng:** Chuyển trạng thái (State Transition) 
 - **Mức độ ưu tiên:** High | **Trạng thái:** PASSED
 - **Tiền điều kiện (Pre-conditions):**
   > Đơn hàng đang ở trạng thái CONFIRMED
@@ -2466,7 +2466,7 @@
 
 ### TC-ST-13: Chuyển trạng thái đơn hàng: SHIPPED -> COMPLETED khi Người mua nhận xe
 - **Phân hệ (Module):** Vòng đời đơn hàng
-- **Kỹ thuật áp dụng:** Chuyển trạng thái (State Transition) (Chương 4)
+- **Kỹ thuật áp dụng:** Chuyển trạng thái (State Transition) 
 - **Mức độ ưu tiên:** High | **Trạng thái:** PASSED
 - **Tiền điều kiện (Pre-conditions):**
   > Đơn hàng đang ở trạng thái SHIPPED
@@ -2484,7 +2484,7 @@
 
 ### TC-WB-11: Kiểm thử nhánh rẽ M2-P4: Hủy đơn hàng và khôi phục trạng thái xe về AVAILABLE
 - **Phân hệ (Module):** Xử lý Controller
-- **Kỹ thuật áp dụng:** Kiểm thử Hộp trắng (White-box) (Chương 4)
+- **Kỹ thuật áp dụng:** Kiểm thử Hộp trắng (White-box) 
 - **Mức độ ưu tiên:** High | **Trạng thái:** PASSED
 - **Tiền điều kiện (Pre-conditions):**
   > Hàm updateOrderStatus nhận status = 'CANCELLED'
@@ -2501,7 +2501,7 @@
 
 ### TC-WB-12: Kiểm thử nhánh rẽ M2-P5: Cập nhật trạng thái trung gian SHIPPED giữ nguyên xe
 - **Phân hệ (Module):** Xử lý Controller
-- **Kỹ thuật áp dụng:** Kiểm thử Hộp trắng (White-box) (Chương 4)
+- **Kỹ thuật áp dụng:** Kiểm thử Hộp trắng (White-box) 
 - **Mức độ ưu tiên:** High | **Trạng thái:** PASSED
 - **Tiền điều kiện (Pre-conditions):**
   > Hàm updateOrderStatus nhận status = 'SHIPPED'
@@ -2518,7 +2518,7 @@
 
 ### TC-UC-11: Kịch bản Tìm kiếm và Lọc xe đạp theo thương hiệu Giant và tầm giá < 10 triệu
 - **Phân hệ (Module):** Luồng nghiệp vụ
-- **Kỹ thuật áp dụng:** Kiểm thử Trường hợp sử dụng (Use Case) (Chương 4)
+- **Kỹ thuật áp dụng:** Kiểm thử Trường hợp sử dụng (Use Case) 
 - **Mức độ ưu tiên:** Medium | **Trạng thái:** PASSED
 - **Tiền điều kiện (Pre-conditions):**
   > Người dùng ở trang chủ index.php
@@ -2538,7 +2538,7 @@
 
 ### TC-UC-12: Kịch bản Đăng tin bán xe đạp hoàn chỉnh từ nhập thông tin đến tải ảnh
 - **Phân hệ (Module):** Luồng nghiệp vụ
-- **Kỹ thuật áp dụng:** Kiểm thử Trường hợp sử dụng (Use Case) (Chương 4)
+- **Kỹ thuật áp dụng:** Kiểm thử Trường hợp sử dụng (Use Case) 
 - **Mức độ ưu tiên:** High | **Trạng thái:** PASSED
 - **Tiền điều kiện (Pre-conditions):**
   > Người dùng đã đăng nhập tài khoản
@@ -2558,7 +2558,7 @@
 
 ### TC-UC-13: Kịch bản Cập nhật thông tin hồ sơ cá nhân và đổi mật khẩu tài khoản
 - **Phân hệ (Module):** Luồng nghiệp vụ
-- **Kỹ thuật áp dụng:** Kiểm thử Trường hợp sử dụng (Use Case) (Chương 4)
+- **Kỹ thuật áp dụng:** Kiểm thử Trường hợp sử dụng (Use Case) 
 - **Mức độ ưu tiên:** High | **Trạng thái:** PASSED
 - **Tiền điều kiện (Pre-conditions):**
   > Người dùng đã đăng nhập
