@@ -1,23 +1,23 @@
 {
   "hasFailed": false,
   "stats": {
-    "passes": 1,
+    "passes": 5,
     "failures": 0,
-    "tests": 1,
+    "tests": 5,
     "pending": 0,
     "failedHooks": 0,
-    "start": "2026-10-13T16:03:48.715Z",
-    "end": "2026-10-13T16:03:49.214Z",
-    "duration": 499
+    "start": "2026-11-16T11:36:46.448Z",
+    "end": "2026-11-16T11:37:14.542Z",
+    "duration": 28094
   },
-  "duration": 742,
+  "duration": 28594,
   "tests": [
     {
       "opts": {},
       "tags": [],
-      "uid": "LO9qvom72cJvA59KS1yOvHXOpQSueClvGs_UNeqJAC",
+      "uid": "NrX2ccZDvnH23l_QE6fVSlEQ65DqH946mYmrRya7Ds",
       "retries": -1,
-      "title": "test something",
+      "title": "1. Luồng Người Dùng: Truy cập trang chủ, tìm kiếm và kiểm tra giao diện",
       "state": "passed",
       "notes": [],
       "meta": {
@@ -26,11 +26,481 @@
         "windowSize": "1280x720"
       },
       "artifacts": [],
-      "duration": 10,
+      "duration": 2347,
       "parent": {
-        "title": "npx codeceptjs run --steps"
+        "title": "Kiểm thử giao diện tự động (E2E) Toàn diện - Website Mua Bán Xe Đạp"
       },
-      "steps": []
+      "steps": [
+        {
+          "opts": {},
+          "title": "amOnPage",
+          "args": [
+            "/"
+          ],
+          "status": "success",
+          "startTime": 1794829007163,
+          "endTime": 1794829008175,
+          "parent": {}
+        },
+        {
+          "opts": {},
+          "title": "seeInTitle",
+          "args": [
+            "Website Mua Bán Xe Đạp"
+          ],
+          "status": "success",
+          "startTime": 1794829008176,
+          "endTime": 1794829008179,
+          "parent": {}
+        },
+        {
+          "opts": {},
+          "title": "see",
+          "args": [
+            "Chào mừng đến với Chợ Xe Đạp Cũ"
+          ],
+          "status": "success",
+          "startTime": 1794829008179,
+          "endTime": 1794829008186,
+          "parent": {}
+        },
+        {
+          "opts": {},
+          "title": "seeElement",
+          "args": [
+            "#keyword"
+          ],
+          "status": "success",
+          "startTime": 1794829008186,
+          "endTime": 1794829008199,
+          "parent": {}
+        },
+        {
+          "opts": {},
+          "title": "seeElement",
+          "args": [
+            "#search-category-select"
+          ],
+          "status": "success",
+          "startTime": 1794829008199,
+          "endTime": 1794829008211,
+          "parent": {}
+        },
+        {
+          "opts": {},
+          "title": "fillField",
+          "args": [
+            "#keyword",
+            "Xe đạp"
+          ],
+          "status": "success",
+          "startTime": 1794829008211,
+          "endTime": 1794829008489,
+          "parent": {}
+        },
+        {
+          "opts": {},
+          "title": "wait",
+          "args": [
+            "1"
+          ],
+          "status": "success",
+          "startTime": 1794829008490,
+          "endTime": 1794829009490,
+          "parent": {}
+        },
+        {
+          "opts": {},
+          "title": "see",
+          "args": [
+            "Trang Chủ"
+          ],
+          "status": "success",
+          "startTime": 1794829009492,
+          "endTime": 1794829009496,
+          "parent": {}
+        }
+      ]
+    },
+    {
+      "opts": {},
+      "tags": [],
+      "uid": "Nw_LnfTOO7UDIkwjTJLf+YFO78MbyfHt_0C07TTSDk",
+      "retries": -1,
+      "title": "2. Luồng Xác Thực: Kiểm tra xác thực form Đăng ký tài khoản",
+      "state": "passed",
+      "notes": [],
+      "meta": {
+        "browser": "chromium",
+        "browserVersion": "156.0.8078.4",
+        "windowSize": "1280x720"
+      },
+      "artifacts": [],
+      "duration": 16910,
+      "parent": {
+        "title": "Kiểm thử giao diện tự động (E2E) Toàn diện - Website Mua Bán Xe Đạp"
+      },
+      "steps": [
+        {
+          "opts": {},
+          "title": "amOnPage",
+          "args": [
+            "/register.php"
+          ],
+          "status": "success",
+          "startTime": 1794829009582,
+          "endTime": 1794829022368,
+          "parent": {}
+        },
+        {
+          "opts": {},
+          "title": "see",
+          "args": [
+            "Đăng Ký"
+          ],
+          "status": "success",
+          "startTime": 1794829022369,
+          "endTime": 1794829022374,
+          "parent": {}
+        },
+        {
+          "opts": {},
+          "title": "fillField",
+          "args": [
+            "#name",
+            "Sinh Vien Tester"
+          ],
+          "status": "success",
+          "startTime": 1794829022374,
+          "endTime": 1794829022787,
+          "parent": {}
+        },
+        {
+          "opts": {},
+          "title": "fillField",
+          "args": [
+            "#email",
+            "tester_bva@gmail.com"
+          ],
+          "status": "success",
+          "startTime": 1794829022788,
+          "endTime": 1794829023272,
+          "parent": {}
+        },
+        {
+          "opts": {},
+          "title": "fillField",
+          "args": [
+            "#password",
+            "12345"
+          ],
+          "status": "success",
+          "startTime": 1794829023273,
+          "endTime": 1794829023506,
+          "parent": {}
+        },
+        {
+          "opts": {},
+          "title": "fillField",
+          "args": [
+            "#password-confirm",
+            "12345"
+          ],
+          "status": "success",
+          "startTime": 1794829023507,
+          "endTime": 1794829023740,
+          "parent": {}
+        },
+        {
+          "opts": {},
+          "title": "wait",
+          "args": [
+            "1"
+          ],
+          "status": "success",
+          "startTime": 1794829023740,
+          "endTime": 1794829024749,
+          "parent": {}
+        },
+        {
+          "opts": {},
+          "title": "fillField",
+          "args": [
+            "#password",
+            "Password123"
+          ],
+          "status": "success",
+          "startTime": 1794829024749,
+          "endTime": 1794829025084,
+          "parent": {}
+        },
+        {
+          "opts": {},
+          "title": "fillField",
+          "args": [
+            "#password-confirm",
+            "Password123"
+          ],
+          "status": "success",
+          "startTime": 1794829025085,
+          "endTime": 1794829025484,
+          "parent": {}
+        },
+        {
+          "opts": {},
+          "title": "wait",
+          "args": [
+            "1"
+          ],
+          "status": "success",
+          "startTime": 1794829025485,
+          "endTime": 1794829026489,
+          "parent": {}
+        }
+      ]
+    },
+    {
+      "opts": {},
+      "tags": [],
+      "uid": "+EQxonesiwEBw3bH5xBxWMqAvNSMIZw4RKBuxiR6sM",
+      "retries": -1,
+      "title": "3. Luồng Xác Thực: Kiểm tra form Đăng nhập tài khoản",
+      "state": "passed",
+      "notes": [],
+      "meta": {
+        "browser": "chromium",
+        "browserVersion": "156.0.8078.4",
+        "windowSize": "1280x720"
+      },
+      "artifacts": [],
+      "duration": 4259,
+      "parent": {
+        "title": "Kiểm thử giao diện tự động (E2E) Toàn diện - Website Mua Bán Xe Đạp"
+      },
+      "steps": [
+        {
+          "opts": {},
+          "title": "amOnPage",
+          "args": [
+            "/login.php"
+          ],
+          "status": "success",
+          "startTime": 1794829026562,
+          "endTime": 1794829027318,
+          "parent": {}
+        },
+        {
+          "opts": {},
+          "title": "see",
+          "args": [
+            "Đăng Nhập"
+          ],
+          "status": "success",
+          "startTime": 1794829027319,
+          "endTime": 1794829027324,
+          "parent": {}
+        },
+        {
+          "opts": {},
+          "title": "fillField",
+          "args": [
+            "#email",
+            "admin@gmail.com"
+          ],
+          "status": "success",
+          "startTime": 1794829027324,
+          "endTime": 1794829027722,
+          "parent": {}
+        },
+        {
+          "opts": {},
+          "title": "fillField",
+          "args": [
+            "#password",
+            "sai_mat_khau_123"
+          ],
+          "status": "success",
+          "startTime": 1794829027723,
+          "endTime": 1794829028137,
+          "parent": {}
+        },
+        {
+          "opts": {},
+          "title": "wait",
+          "args": [
+            "1"
+          ],
+          "status": "success",
+          "startTime": 1794829028137,
+          "endTime": 1794829029140,
+          "parent": {}
+        },
+        {
+          "opts": {},
+          "title": "fillField",
+          "args": [
+            "#email",
+            "admin@gmail.com"
+          ],
+          "status": "success",
+          "startTime": 1794829029140,
+          "endTime": 1794829029553,
+          "parent": {}
+        },
+        {
+          "opts": {},
+          "title": "fillField",
+          "args": [
+            "#password",
+            "123456"
+          ],
+          "status": "success",
+          "startTime": 1794829029553,
+          "endTime": 1794829029801,
+          "parent": {}
+        },
+        {
+          "opts": {},
+          "title": "wait",
+          "args": [
+            "1"
+          ],
+          "status": "success",
+          "startTime": 1794829029802,
+          "endTime": 1794829030817,
+          "parent": {}
+        }
+      ]
+    },
+    {
+      "opts": {},
+      "tags": [],
+      "uid": "ZOXHYaOXQgNUIPtwy7Kg_bU0rNt6gVTFnvuLqv2iDN",
+      "retries": -1,
+      "title": "4. Luồng Thông Tin Doanh Nghiệp: Kiểm tra trang giới thiệu About Us",
+      "state": "passed",
+      "notes": [],
+      "meta": {
+        "browser": "chromium",
+        "browserVersion": "156.0.8078.4",
+        "windowSize": "1280x720"
+      },
+      "artifacts": [],
+      "duration": 1797,
+      "parent": {
+        "title": "Kiểm thử giao diện tự động (E2E) Toàn diện - Website Mua Bán Xe Đạp"
+      },
+      "steps": [
+        {
+          "opts": {},
+          "title": "amOnPage",
+          "args": [
+            "/about-us.php"
+          ],
+          "status": "success",
+          "startTime": 1794829030894,
+          "endTime": 1794829031670,
+          "parent": {}
+        },
+        {
+          "opts": {},
+          "title": "see",
+          "args": [
+            "About Us"
+          ],
+          "status": "success",
+          "startTime": 1794829031670,
+          "endTime": 1794829031675,
+          "parent": {}
+        },
+        {
+          "opts": {},
+          "title": "see",
+          "args": [
+            "About Our Company"
+          ],
+          "status": "success",
+          "startTime": 1794829031675,
+          "endTime": 1794829031678,
+          "parent": {}
+        },
+        {
+          "opts": {},
+          "title": "wait",
+          "args": [
+            "1"
+          ],
+          "status": "success",
+          "startTime": 1794829031678,
+          "endTime": 1794829032689,
+          "parent": {}
+        }
+      ]
+    },
+    {
+      "opts": {},
+      "tags": [],
+      "uid": "NCgRcS43jsLQikz7K1FWMwe6NtUpRS5Lo4Ipj5dbFd",
+      "retries": -1,
+      "title": "5. Luồng Dịch Vụ: Kiểm tra trang bảng giá Pricing Table",
+      "state": "passed",
+      "notes": [],
+      "meta": {
+        "browser": "chromium",
+        "browserVersion": "156.0.8078.4",
+        "windowSize": "1280x720"
+      },
+      "artifacts": [],
+      "duration": 1773,
+      "parent": {
+        "title": "Kiểm thử giao diện tự động (E2E) Toàn diện - Website Mua Bán Xe Đạp"
+      },
+      "steps": [
+        {
+          "opts": {},
+          "title": "amOnPage",
+          "args": [
+            "/pricing.php"
+          ],
+          "status": "success",
+          "startTime": 1794829032769,
+          "endTime": 1794829033514,
+          "parent": {}
+        },
+        {
+          "opts": {},
+          "title": "see",
+          "args": [
+            "Pricing Table"
+          ],
+          "status": "success",
+          "startTime": 1794829033514,
+          "endTime": 1794829033522,
+          "parent": {}
+        },
+        {
+          "opts": {},
+          "title": "see",
+          "args": [
+            "Pricing Plan"
+          ],
+          "status": "success",
+          "startTime": 1794829033522,
+          "endTime": 1794829033525,
+          "parent": {}
+        },
+        {
+          "opts": {},
+          "title": "wait",
+          "args": [
+            "1"
+          ],
+          "status": "success",
+          "startTime": 1794829033525,
+          "endTime": 1794829034538,
+          "parent": {}
+        }
+      ]
     }
   ],
   "failures": []

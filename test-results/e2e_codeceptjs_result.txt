@@ -1,0 +1,80 @@
+======================================================================
+ BẮT ĐẦU CHẠY KIỂM THỬ HỘP TRẮNG (WHITE-BOX BASIS PATH TESTING) - CHƯƠNG 4
+======================================================================
+
+[PASS] Path 1: Nhánh rẽ 1: Kiểm thử thiếu trường dữ liệu đầu vào (post_id null)
+[PASS] Path 2: Nhánh rẽ 2: Kiểm thử phương thức thanh toán không hợp lệ (CRYPTO)
+[PASS] Path 3: Nhánh rẽ 3: Kiểm thử bài đăng xe không tồn tại hoặc đã bị hủy (post null)
+[PASS] Path 4: Nhánh rẽ 4: Kiểm thử ngăn người bán tự mua xe của chính mình (seller_id === buyer_id)
+[PASS] Path 5: Nhánh rẽ 5: Kiểm thử đặt hàng thành công phương thức COD (payment_status: SUCCESS)
+[PASS] Path 6: Nhánh rẽ 6: Kiểm thử đặt hàng thành công phương thức VNPAY (payment_status: PENDING)
+
+----------------------------------------------------------------------
+ KẾT QUẢ KIỂM THỬ: 6/6 PATHS PASSED (ĐỘ PHỦ NHÁNH BRANCH COVERAGE: 100%)
+======================================================================
+CodeceptJS v4.2.1 #StandWithUkraine
+Using test root "D:\kcpm"
+
+Kiểm thử giao diện tự động (E2E) Toàn diện - Website Mua Bán Xe Đạp --
+D:\kcpm\tests\auth_test.js
+  1. Luồng Người Dùng: Truy cập trang chủ, tìm kiếm và kiểm tra giao diện
+  Scenario()
+    I am on page "/"
+    I see in title "Website Mua Bán Xe Đạp"
+    I see "Chào mừng đến với Chợ Xe Đạp Cũ"
+    I see element "#keyword"
+    I see element "#search-category-select"
+    I fill field "#keyword", "Xe đạp"
+    I wait 1
+    I see "Trang Chủ"
+  √ OK in 2347ms
+
+  2. Luồng Xác Thực: Kiểm tra xác thực form Đăng ký tài khoản
+  Scenario()
+    I am on page "/register.php"
+    I see "Đăng Ký"
+    I fill field "#name", "Sinh Vien Tester"
+    I fill field "#email", "tester_bva@gmail.com"
+    I fill field "#password", "12345"
+    I fill field "#password-confirm", "12345"
+    I wait 1
+    I fill field "#password", "Password123"
+    I fill field "#password-confirm", "Password123"
+    I wait 1
+  √ OK in 16910ms
+
+  3. Luồng Xác Thực: Kiểm tra form Đăng nhập tài khoản
+  Scenario()
+    I am on page "/login.php"
+    I see "Đăng Nhập"
+    I fill field "#email", "admin@gmail.com"
+    I fill field "#password", "sai_mat_khau_123"
+    I wait 1
+    I fill field "#email", "admin@gmail.com"
+    I fill field "#password", "123456"
+    I wait 1
+  √ OK in 4259ms
+
+  4. Luồng Thông Tin Doanh Nghiệp: Kiểm tra trang giới thiệu About Us
+  Scenario()
+    I am on page "/about-us.php"
+    I see "About Us"
+    I see "About Our Company"
+    I wait 1
+  √ OK in 1797ms
+
+  5. Luồng Dịch Vụ: Kiểm tra trang bảng giá Pricing Table
+  Scenario()
+    I am on page "/pricing.php"
+    I see "Pricing Table"
+    I see "Pricing Plan"
+    I wait 1
+  √ OK in 1773ms
+
+
+  OK  | 5 passed   // 28s
+
+(node:5748) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///D:/kcpm/codecept.conf.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to D:\kcpm\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)

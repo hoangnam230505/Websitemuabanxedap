@@ -1,0 +1,14 @@
+======================================================================
+ BẮT ĐẦU CHẠY KIỂM THỬ HỘP TRẮNG (WHITE-BOX BASIS PATH TESTING) - CHƯƠNG 4
+======================================================================
+
+[PASS] Path 1: Nhánh rẽ 1: Kiểm thử thiếu trường dữ liệu đầu vào (post_id null)
+[PASS] Path 2: Nhánh rẽ 2: Kiểm thử phương thức thanh toán không hợp lệ (CRYPTO)
+[PASS] Path 3: Nhánh rẽ 3: Kiểm thử bài đăng xe không tồn tại hoặc đã bị hủy (post null)
+[PASS] Path 4: Nhánh rẽ 4: Kiểm thử ngăn người bán tự mua xe của chính mình (seller_id === buyer_id)
+[PASS] Path 5: Nhánh rẽ 5: Kiểm thử đặt hàng thành công phương thức COD (payment_status: SUCCESS)
+[PASS] Path 6: Nhánh rẽ 6: Kiểm thử đặt hàng thành công phương thức VNPAY (payment_status: PENDING)
+
+----------------------------------------------------------------------
+ KẾT QUẢ KIỂM THỬ: 6/6 PATHS PASSED (ĐỘ PHỦ NHÁNH BRANCH COVERAGE: 100%)
+======================================================================
