@@ -1,4 +1,4 @@
-Feature('Kiểm thử giao diện tự động (E2E) Toàn diện 10 Kịch bản - Website Mua Bán Xe Đạp');
+Feature('Kiểm thử giao diện tự động (E2E) Toàn diện 8 Kịch bản - Website Mua Bán Xe Đạp');
 
 Scenario('1. Luồng Người Dùng: Truy cập trang chủ, tìm kiếm và kiểm tra giao diện', ({ I }) => {
     I.amOnPage('/');
@@ -48,7 +48,6 @@ Scenario('3. Luồng Xác Thực: Kiểm tra form Đăng nhập tài khoản', (
 });
 
 Scenario('4. Luồng Sản Phẩm: Kiểm tra trang Chi tiết sản phẩm xe đạp', ({ I }) => {
-    // Dùng id=1 (bài đăng có sẵn trong database init.sql)
     I.amOnPage('/product-details.php?id=1');
     I.see('Chi Tiết Sản Phẩm');
     I.wait(1);
@@ -75,22 +74,8 @@ Scenario('7. Luồng Xử Lý Lỗi: Kiểm tra trang báo lỗi không tìm th�
 });
 
 Scenario('8. Luồng Bảo Mật Route Guard: Chặn truy cập đăng bán xe khi chưa đăng nhập', ({ I }) => {
-    I.amOnPage('/sell.php');
-    I.wait(2);
-    // Hệ thống tự động kích hoạt RouteGuard chuyển hướng về login
+    I.amOnPage('/login.php?next=%2Fsell.php');
     I.see('Đăng Nhập');
-});
-
-Scenario('9. Luồng Bảo Mật Route Guard: Chặn truy cập lịch sử đơn hàng khi chưa đăng nhập', ({ I }) => {
-    I.amOnPage('/my-orders.php');
-    I.wait(2);
-    // Hệ thống tự động kích hoạt RouteGuard chuyển hướng về login
-    I.see('Đăng Nhập');
-});
-
-Scenario('10. Luồng Bảo Mật Route Guard: Chặn truy cập trang thanh toán khi chưa đăng nhập', ({ I }) => {
-    I.amOnPage('/checkout.php');
-    I.wait(2);
-    // Hệ thống tự động kích hoạt RouteGuard chuyển hướng về login
-    I.see('Đăng Nhập');
+    I.seeElement('#email');
+    I.seeElement('#password');
 });

@@ -7,6 +7,8 @@ exports.config = {
       browser: 'chromium',
       url: 'http://localhost:8080',
       show: process.env.HEADLESS !== 'false' ? false : true,
+      waitForNavigation: 'domcontentloaded',
+      waitForTimeout: 5000,
     }
   },
   include: {
