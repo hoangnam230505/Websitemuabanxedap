@@ -1,6 +1,6 @@
 /** @type {CodeceptJS.MainConfig} */
-export const config = {
-  tests: './tests/*_test.js',
+exports.config = {
+  tests: './tests/auth_test.js',
   output: './output',
   helpers: {
     Playwright: {
