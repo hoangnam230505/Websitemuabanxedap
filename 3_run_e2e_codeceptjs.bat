@@ -1,4 +1,5 @@
 @echo off
+cd /d "%~dp0"
 title KIEM THU TU DONG GIAO DIEN (CODECEPTJS + PLAYWRIGHT)
 echo ======================================================================
 echo   DANG CHAY KIEM THU TU DONG HOA GIAO DIEN E2E

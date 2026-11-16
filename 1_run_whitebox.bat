@@ -1,5 +1,6 @@
 @echo off
-title KIEM THU HOP TRANG (WHITE-BOX TESTING) - CHUONG 4
+cd /d "%~dp0"
+title KIEM THU HOP TRANG (WHITE-BOX TESTING) - CFG BASIS PATH
 echo ======================================================================
 echo   DANG CHAY KIEM THU HOP TRANG (WHITE-BOX CFG BASIS PATH)
 echo ======================================================================

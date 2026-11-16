@@ -1,4 +1,5 @@
 @echo off
+cd /d "%~dp0"
 title HE THONG KIEM THU TU DONG TOAN DIEN - UTH
 echo ======================================================================
 echo   HE THONG KIEM THU TU DONG TOAN DIEN - WEB MUA BAN XE DAP (UTH)

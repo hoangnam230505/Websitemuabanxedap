@@ -40,7 +40,9 @@
                 "exec": [
                   "var uniqueEmail = 'tester_' + Date.now() + '@gmail.com';",
                   "pm.collectionVariables.set('testEmail', uniqueEmail);",
-                  "pm.collectionVariables.set('testPassword', 'Password123');"
+                  "pm.environment.set('testEmail', uniqueEmail);",
+                  "pm.collectionVariables.set('testPassword', 'Password123');",
+                  "pm.environment.set('testPassword', 'Password123');"
                 ]
               }
             },

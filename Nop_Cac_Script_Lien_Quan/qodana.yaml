@@ -1,0 +1,7 @@
+version: "1.0"
+linter: jetbrains/qodana-js:latest
+profile:
+  name: qodana.starter
+exclude:
+  - name: node_modules
+  - name: uploads

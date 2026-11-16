@@ -1,4 +1,5 @@
 @echo off
+cd /d "%~dp0"
 title KIEM THU TU DONG API (NEWMAN / POSTMAN)
 echo ======================================================================
 echo   DANG CHAY KIEM THU TU DONG HOA API BANG NEWMAN CLI
